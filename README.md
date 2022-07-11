@@ -22,9 +22,8 @@ npx projen new --from @gemeentenijmegen/modules-projen
 ```
 
 ### For existing projects
-
-
-### Switching back to the awscdk-app-ts projen project type
+For instructions on how to start using the project type in existing projects there is the [setup guide](./SETUP.md). 
+Note: for switching back to the awscdk-app-ts projen project type also see the [setup guide](./SETUP.md).
 
 
 ## Properties overview
