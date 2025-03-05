@@ -7,6 +7,7 @@
   "scripts": {
     "build": "npx projen build",
     "bump": "npx projen bump",
+    "bundle-templates": "npx projen bundle-templates",
     "clobber": "npx projen clobber",
     "compat": "npx projen compat",
     "compile": "npx projen compile",

@@ -42,6 +42,9 @@
       ],
       "condition": "git log --oneline -1 | grep -qv \"chore(release):\""
     },
+    "bundle-templates": {
+      "name": "bundle-templates"
+    },
     "clobber": {
       "name": "clobber",
       "description": "hard resets to HEAD of origin and cleans the local repo",
@@ -211,7 +214,7 @@
       "description": "Prepare the project for compilation",
       "steps": [
         {
-          "exec": "echo Build completed successfully."
+          "exec": "npx projen bundle-templates"
         }
       ]
     },

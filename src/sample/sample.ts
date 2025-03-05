@@ -1,5 +1,5 @@
 import { Project, SampleFile } from 'projen';
-import { ConfigurationFileText, MainFileText, MainStackText, MainStageText, ParametersText, PipelineFileText, StaticsFileText } from './TemplateText';
+import { Configuration, Main, MainStack, MainStage, Parameters, PipelineStack, Statics } from './TemplateText';
 
 export class GemeenteNijmegenSampleFiles {
   constructor(scope: Project) {
@@ -15,7 +15,7 @@ export class GemeenteNijmegenSampleFiles {
 export class MainFile extends SampleFile {
   constructor(scope: Project) {
     super(scope, 'src/index.ts', {
-      contents: MainFileText,
+      contents: Main,
     });
   }
 }
@@ -23,7 +23,7 @@ export class MainFile extends SampleFile {
 export class ConfigurationFile extends SampleFile {
   constructor(scope: Project) {
     super(scope, 'src/Configuration.ts', {
-      contents: ConfigurationFileText,
+      contents: Configuration,
     });
   }
 }
@@ -31,7 +31,7 @@ export class ConfigurationFile extends SampleFile {
 export class ParametersFile extends SampleFile {
   constructor(scope: Project) {
     super(scope, 'src/Parameters.ts', {
-      contents: ParametersText,
+      contents: Parameters,
     });
   }
 }
@@ -39,7 +39,7 @@ export class ParametersFile extends SampleFile {
 export class MainStageFile extends SampleFile {
   constructor(scope: Project) {
     super(scope, 'src/MainStage.ts', {
-      contents: MainStageText,
+      contents: MainStage,
     });
   }
 }
@@ -47,7 +47,7 @@ export class MainStageFile extends SampleFile {
 export class MainStackFile extends SampleFile {
   constructor(scope: Project) {
     super(scope, 'src/MainStack.ts', {
-      contents: MainStackText,
+      contents: MainStack,
     });
   }
 }
@@ -55,14 +55,14 @@ export class MainStackFile extends SampleFile {
 export class PipelineStackFile extends SampleFile {
   constructor(scope: Project) {
     super(scope, 'src/PipelineStack.ts', {
-      contents: PipelineFileText,
+      contents: PipelineStack,
     });
   }
 }
 
 export class StaticsFile extends SampleFile {
   constructor(scope: Project) {
-    let text = StaticsFileText.replace('<project-name>', scope.name);
+    let text = Statics.replace('<project-name>', scope.name);
     super(scope, 'src/Statics.ts', {
       contents: text,
     });

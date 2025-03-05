@@ -27,6 +27,9 @@ const project = new cdk.JsiiProject({
     extract: 'cd dist/js && rm -rf package && tar -xzvf projen-project-type@*',
     'bundle-templates': '',
   },
+  gitignore: [
+    'src/sample/TemplateText.ts'
+  ],
 });
 
 project.tasks.tryFind("pre-compile")?.exec("npx projen bundle-templates");
