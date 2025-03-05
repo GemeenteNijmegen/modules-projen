@@ -16,19 +16,19 @@ const project = new cdk.JsiiProject({
   releaseToNpm: true,
   npmAccess: NpmAccess.PUBLIC,
   devDeps: [
-    '@types/jest@28.1.1', // Pin and exclude as jsii complains about dependencies otherwise...
+    '@glen/jest-raw-loader',
   ],
   peerDeps: [
     'projen',
     'constructs',
   ], // Make sure the consuming library will provide a projen version.
   packageName: packageName,
-  depsUpgradeOptions: {
-    exclude: ['@types/jest'],
-  },
   scripts: {
     extract: 'cd dist/js && rm -rf package && tar -xzvf projen-project-type@*',
+    'bundle-templates': '',
   },
 });
+
+project.tasks.tryFind("pre-compile")?.exec("npx projen bundle-templates");
 
 project.synth();
