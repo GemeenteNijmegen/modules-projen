@@ -4,7 +4,7 @@ import { bundleTemplates } from '../bundletemplates';
 
 test('bundle', () => {
   bundleTemplates();
-})
+});
 
 describe('GemeenteNijmegenCdkApp tests', () => {
 

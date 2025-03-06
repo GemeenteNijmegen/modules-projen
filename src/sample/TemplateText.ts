@@ -106,7 +106,7 @@ export function getBranchToBuild(defaultBanchToBuild?: string) {
   build = environmentBranchName ?? build;
 
   return build;
-}`
+}`;
 export const Main = `import { App } from 'aws-cdk-lib';
 import { getBranchToBuild, getConfiguration } from './configuration';
 import { PipelineStack } from './PipelineStack';
@@ -126,7 +126,7 @@ new PipelineStack(app, stackName, {
   configuration: configuration,
 });
 
-app.synth();`
+app.synth();`;
 export const MainStack = `import { Stack, StackProps } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import { Configurable } from './configuration';
@@ -140,7 +140,7 @@ export class MainStack extends Stack {
     // TODO add resources here
 
   }
-}`
+}`;
 export const MainStage = `import { PermissionsBoundaryAspect } from '@gemeentenijmegen/aws-constructs';
 import { Aspects, Stage, StageProps } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
@@ -170,7 +170,7 @@ export class MainStage extends Stage {
 
   }
 
-}`
+}`;
 export const Parameters = `import { PermissionsBoundaryAspect } from '@gemeentenijmegen/aws-constructs';
 import { Aspects, Stack, Stage, StageProps, Tags } from 'aws-cdk-lib';
 import { StringParameter } from 'aws-cdk-lib/aws-ssm';
@@ -210,7 +210,7 @@ export class ParameterStack extends Stack {
     });
 
   }
-}`
+}`;
 export const PipelineStack = `import { PermissionsBoundaryAspect } from '@gemeentenijmegen/aws-constructs';
 import { Aspects, CfnParameter, Stack, StackProps, Tags, pipelines } from 'aws-cdk-lib';
 import { Secret } from 'aws-cdk-lib/aws-secretsmanager';
@@ -303,7 +303,7 @@ export class PipelineStack extends Stack {
       connectionArn: connectionArn.valueAsString,
     });
   }
-}`
+}`;
 export const Statics = `export class Statics {
 
   static readonly projectName = '<project-name>';
@@ -336,4 +336,4 @@ export const Statics = `export class Statics {
   static readonly accountHostedzoneName = '';
   static readonly accountHostedzoneId = '';
 
-}`
+}`;

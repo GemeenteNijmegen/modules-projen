@@ -1,10 +1,6 @@
 {
   "dependencies": [
     {
-      "name": "@glen/jest-raw-loader",
-      "type": "build"
-    },
-    {
       "name": "@stylistic/eslint-plugin",
       "version": "^2",
       "type": "build"
@@ -88,6 +84,10 @@
     },
     {
       "name": "ts-jest",
+      "type": "build"
+    },
+    {
+      "name": "ts-node",
       "type": "build"
     },
     {

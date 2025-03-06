@@ -16,7 +16,7 @@ const project = new cdk.JsiiProject({
   releaseToNpm: true,
   npmAccess: NpmAccess.PUBLIC,
   devDeps: [
-    '@glen/jest-raw-loader',
+    'ts-node',
   ],
   peerDeps: [
     'projen',
@@ -24,14 +24,11 @@ const project = new cdk.JsiiProject({
   ], // Make sure the consuming library will provide a projen version.
   packageName: packageName,
   scripts: {
-    extract: 'cd dist/js && rm -rf package && tar -xzvf projen-project-type@*',
-    'bundle-templates': '',
+    'extract': 'cd dist/js && rm -rf package && tar -xzvf projen-project-type@*',
+    'bundle-templates': 'npx ts-node src/sample/bundletemplates.ts',
   },
-  gitignore: [
-    'src/sample/TemplateText.ts'
-  ],
 });
 
-project.tasks.tryFind("pre-compile")?.exec("npx projen bundle-templates");
+project.tasks.tryFind('pre-compile')?.exec('npx projen bundle-templates');
 
 project.synth();
