@@ -1,5 +1,5 @@
 import { App } from 'aws-cdk-lib';
-import { getBranchToBuild, getConfiguration } from './configuration';
+import { getBranchToBuild, getConfiguration } from './Configuration';
 import { PipelineStack } from './PipelineStack';
 import { Statics } from './Statics';
 

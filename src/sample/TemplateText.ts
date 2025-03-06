@@ -108,7 +108,7 @@ export function getBranchToBuild(defaultBanchToBuild?: string) {
   return build;
 }`;
 export const Main = `import { App } from 'aws-cdk-lib';
-import { getBranchToBuild, getConfiguration } from './configuration';
+import { getBranchToBuild, getConfiguration } from './Configuration';
 import { PipelineStack } from './PipelineStack';
 import { Statics } from './Statics';
 
@@ -129,7 +129,7 @@ new PipelineStack(app, stackName, {
 app.synth();`;
 export const MainStack = `import { Stack, StackProps } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
-import { Configurable } from './configuration';
+import { Configurable } from './Configuration';
 
 interface MainStackProps extends StackProps, Configurable { }
 
@@ -144,7 +144,7 @@ export class MainStack extends Stack {
 export const MainStage = `import { PermissionsBoundaryAspect } from '@gemeentenijmegen/aws-constructs';
 import { Aspects, Stage, StageProps } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
-import { Configurable } from './configuration';
+import { Configurable } from './Configuration';
 import { MainStack } from './MainStack';
 
 interface MainStageProps extends StageProps, Configurable { }
@@ -175,7 +175,7 @@ export const Parameters = `import { PermissionsBoundaryAspect } from '@gemeenten
 import { Aspects, Stack, Stage, StageProps, Tags } from 'aws-cdk-lib';
 import { StringParameter } from 'aws-cdk-lib/aws-ssm';
 import { Construct } from 'constructs';
-import { Configurable } from './configuration';
+import { Configurable } from './Configuration';
 import { Statics } from './Statics';
 
 export interface ParameterStageProps extends StageProps, Configurable { }
@@ -215,7 +215,7 @@ export const PipelineStack = `import { PermissionsBoundaryAspect } from '@gemeen
 import { Aspects, CfnParameter, Stack, StackProps, Tags, pipelines } from 'aws-cdk-lib';
 import { Secret } from 'aws-cdk-lib/aws-secretsmanager';
 import { Construct } from 'constructs';
-import { Configurable } from './configuration';
+import { Configurable } from './Configuration';
 import { MainStage } from './MainStage';
 import { ParameterStage } from './parameters';
 import { Statics } from './Statics';

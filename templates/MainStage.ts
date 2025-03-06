@@ -1,7 +1,7 @@
 import { PermissionsBoundaryAspect } from '@gemeentenijmegen/aws-constructs';
 import { Aspects, Stage, StageProps } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
-import { Configurable } from './configuration';
+import { Configurable } from './Configuration';
 import { MainStack } from './MainStack';
 
 interface MainStageProps extends StageProps, Configurable { }

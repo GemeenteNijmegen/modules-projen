@@ -2,7 +2,7 @@ import { PermissionsBoundaryAspect } from '@gemeentenijmegen/aws-constructs';
 import { Aspects, CfnParameter, Stack, StackProps, Tags, pipelines } from 'aws-cdk-lib';
 import { Secret } from 'aws-cdk-lib/aws-secretsmanager';
 import { Construct } from 'constructs';
-import { Configurable } from './configuration';
+import { Configurable } from './Configuration';
 import { MainStage } from './MainStage';
 import { ParameterStage } from './parameters';
 import { Statics } from './Statics';
