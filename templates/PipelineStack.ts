@@ -86,7 +86,7 @@ export class PipelineStack extends Stack {
    * @returns
    */
   private connectionSource(connectionArn: CfnParameter): pipelines.CodePipelineSource {
-    return pipelines.CodePipelineSource.connection(Statics.projectRepo, this.props.configuration.branchName, {
+    return pipelines.CodePipelineSource.connection(Statics.githubRepository, this.props.configuration.branchName, {
       connectionArn: connectionArn.valueAsString,
     });
   }

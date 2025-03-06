@@ -5,6 +5,12 @@ export class Statics {
    * Used in PipelineStack and Statics
    */
   static readonly projectName = '<project-name>';
+  /**
+   * Github repository of this project
+   * Used in the PipelineStack
+   * TODO make sure this is correct
+   */
+  static readonly githubRepository = `GemeenteNijmegen/${Statics.projectName}`;
 
   static readonly ssmDummyParameter = `/${Statics.projectName}/dummy/parameter`;
 
