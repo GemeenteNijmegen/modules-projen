@@ -298,7 +298,7 @@ export class PipelineStack extends Stack {
    * @returns
    */
   private connectionSource(connectionArn: CfnParameter): pipelines.CodePipelineSource {
-    return pipelines.CodePipelineSource.connection(Statics.projectRepo, this.props.configuration.branchName, {
+    return pipelines.CodePipelineSource.connection(Statics.githubRepository, this.props.configuration.branchName, {
       connectionArn: connectionArn.valueAsString,
     });
   }
@@ -310,6 +310,12 @@ export const Statics = `export class Statics {
    * Used in PipelineStack and Statics
    */
   static readonly projectName = '<project-name>';
+  /**
+   * Github repository of this project
+   * Used in the PipelineStack
+   * TODO make sure this is correct
+   */
+  static readonly githubRepository = \`GemeenteNijmegen/\${Statics.projectName}\`;
 
   static readonly ssmDummyParameter = \`/\${Statics.projectName}/dummy/parameter\`;
 
