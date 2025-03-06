@@ -305,9 +305,13 @@ export class PipelineStack extends Stack {
 }`;
 export const Statics = `export class Statics {
 
+  /**
+   * Name of this project
+   * Used in PipelineStack and Statics
+   */
   static readonly projectName = '<project-name>';
 
-  static readonly ssmDummyParameter = '/\${Statics.projectName}/dummy/parameter';
+  static readonly ssmDummyParameter = \`/\${Statics.projectName}/dummy/parameter\`;
 
   // MARK: environments
   static readonly buildEnvironment = {
