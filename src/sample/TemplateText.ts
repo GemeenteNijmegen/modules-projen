@@ -86,9 +86,8 @@ export function getConfiguration(branchName: string): Configuration {
  * 1. BRANCH_NAME (set in AWS builds)
  * 2. GITHUB_BASE_REF (set in github PR workflow executions)
  * 3. defaultBanchToBuild that is provided as a parameter
- * 3. undefined (no value provided so leave it up to the logic in the main file)
  */
-export function getBranchToBuild(defaultBanchToBuild?: string) {
+export function getBranchToBuild(defaultBanchToBuild: string) {
 
   const branchOptions = configurations.map(config => config.branchName);
   const githubBaseBranchName = process.env.GITHUB_BASE_REF;
