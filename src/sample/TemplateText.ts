@@ -332,8 +332,8 @@ export const Statics = `export class Statics {
   }
 
   // MARK: account hostedzone
-  static readonly accountHostedzonePath = '';
-  static readonly accountHostedzoneName = '';
-  static readonly accountHostedzoneId = '';
+  static readonly accountHostedzonePath = '/gemeente-nijmegen/account/hostedzone';
+  static readonly accountHostedzoneName = '/gemeente-nijmegen/account/hostedzone/id';
+  static readonly accountHostedzoneId = '/gemeente-nijmegen/account/hostedzone/name';
 
 }`;
