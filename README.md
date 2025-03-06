@@ -9,7 +9,7 @@ The project type `GemeenteNijmegenCdkApp` provides a number of default configura
 ## Github secrets
 This project type relies on Github secrets to be set in order for all its Github workflows to work.
 | Environment variable | Explanation                                                                            |
-| -------------------- | -------------------------------------------------------------------------------------- |
+|----------------------|----------------------------------------------------------------------------------------|
 | GITHUB_PROJEN_TOKEN  | [Projen Github personal access token](https://projen.io/github.html#github-api-access) |
 | SLACK_WEBHOOK_URL    | This is the url used for the emergency workflow to publish to slack                    |
 
@@ -34,7 +34,7 @@ Note: for switching back to the awscdk-app-ts projen project type also see the [
 ## Properties overview
 There are a number of relevant properties that are provided by projen
 | Property             | Default      | Explanation                                                               |
-| -------------------- | ------------ | ------------------------------------------------------------------------- |
+|----------------------|--------------|---------------------------------------------------------------------------|
 | cdkVersion           | '2.1.0'      | Minimum version of the cdk to use (upgraded using projen upgrade task)    |
 | defaultReleaseBranch | 'main'       | Should be set to acceptance                                               |
 | name                 | project name | Sets the project name                                                     |
@@ -45,11 +45,11 @@ There are a number of relevant properties that are provided by projen
 
 
 The project type in this npm package provides some additional configuration options:
-| Property                    | Default | Explanation                                                                                 |
-| --------------------------- | ------- | ------------------------------------------------------------------------------------------- |
-| enableCfnLintOnGithub       | true    | Enable step in the Github build workflow that runs cfn-lint                                 |
-| enableEmergencyProcedure    | true    | Adds the emergency procedure workflow to Github workflows                                   |
-| enableAutoMergeDependencies | true    | Adds the auto-merge workflow for PR's to acceptance (from upgrade workflow)                 |
+| Property                    | Default | Explanation                                                                 |
+|-----------------------------|---------|-----------------------------------------------------------------------------|
+| enableCfnLintOnGithub       | true    | Enable step in the Github build workflow that runs cfn-lint                 |
+| enableEmergencyProcedure    | true    | Adds the emergency procedure workflow to Github workflows                   |
+| enableAutoMergeDependencies | true    | Adds the auto-merge workflow for PR's to acceptance (from upgrade workflow) |
 
 
 ## Upgrade dependencies
@@ -73,3 +73,16 @@ Dit betekent dat:
 
 ### Projen upgrade
 De projen versie wordt ook geupgrade in de upgrade dependencies task.
+
+
+## Local testing
+One can locally test project creation using this package by running
+``` bash
+# Run the extract command on this project
+cd /path/to/the/package/modules-projen && npx projen extact
+
+# Create a new test project
+mkdir test-project
+cd test-project
+npx projen new --from file://path/to/the/package/modules-projen/dist/js/package cdk-app
+```
