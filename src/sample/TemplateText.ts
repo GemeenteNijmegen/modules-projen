@@ -216,7 +216,7 @@ import { Secret } from 'aws-cdk-lib/aws-secretsmanager';
 import { Construct } from 'constructs';
 import { Configurable } from './Configuration';
 import { MainStage } from './MainStage';
-import { ParameterStage } from './parameters';
+import { ParameterStage } from './Parameters';
 import { Statics } from './Statics';
 
 export interface PipelineStackProps extends StackProps, Configurable { }

@@ -9,6 +9,7 @@ export class GemeenteNijmegenSampleFiles {
     new PipelineStackFile(scope);
     new MainStageFile(scope);
     new MainStackFile(scope);
+    new ParametersFile(scope);
   }
 }
 
