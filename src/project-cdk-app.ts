@@ -9,6 +9,14 @@ export interface GemeenteNijmegenCdkAppOptions extends AwsCdkTypeScriptAppOption
    * @default true
    */
   readonly enableCfnLintOnGithub?: boolean;
+
+
+  /**
+   * Whether to create sample files.
+   * Defaults to false to make sure older repos have unwanted files by default.
+   * @default false
+   */
+  readonly makeSampleFiles?: boolean;
 }
 
 /**
@@ -23,6 +31,9 @@ export class GemeenteNijmegenCdkApp extends AwsCdkTypeScriptApp {
   constructor(options: GemeenteNijmegenCdkAppOptions) {
 
     const enableCfnLintOnGithub = options.enableCfnLintOnGithub ?? true;
+
+    // default sample files flag (false by default)
+    const makeSampleFiles = options.makeSampleFiles ?? false;
 
     options = setDefaultValues(options);
     options = setupDefaultCdkOptions(options);
@@ -74,8 +85,10 @@ export class GemeenteNijmegenCdkApp extends AwsCdkTypeScriptApp {
      */
     super(options);
 
-    // Create sample files
-    new GemeenteNijmegenSampleFiles(this);
+    // Conditionally create sample files only if makeSampleFiles is true.
+    if (makeSampleFiles) {
+      new GemeenteNijmegenSampleFiles(this);
+    }
 
 
     // Setup dependencies that must be included
