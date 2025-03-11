@@ -84,7 +84,7 @@ De projen versie wordt ook geupgrade in de upgrade dependencies task.
 One can locally test project creation using this package by running
 ``` bash
 # Run the extract command on this project
-cd /path/to/the/package/modules-projen && npx projen extact
+cd /path/to/the/package/modules-projen && npx projen extract
 
 # Create a new test project
 mkdir test-project
