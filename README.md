@@ -26,6 +26,11 @@ The following project types can be used:
 - `jsii-lib` a JSII application (published to NPM by default)
 - `ts-lib` a typescript project (published to NPM by default)
 
+Adding sample files to a cdk-app can be done with
+``` bash
+npx projen new --from @gemeentenijmegen/projen-project-type cdk-app --makeSampleFiles
+```
+
 ### For existing projects
 For instructions on how to start using the project type in existing projects there is the [setup guide](./SETUP.md). 
 Note: for switching back to the awscdk-app-ts projen project type also see the [setup guide](./SETUP.md).
@@ -79,7 +84,7 @@ De projen versie wordt ook geupgrade in de upgrade dependencies task.
 One can locally test project creation using this package by running
 ``` bash
 # Run the extract command on this project
-cd /path/to/the/package/modules-projen && npx projen extact
+cd /path/to/the/package/modules-projen && npx projen extract
 
 # Create a new test project
 mkdir test-project

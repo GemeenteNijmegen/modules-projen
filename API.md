@@ -6402,6 +6402,7 @@ const gemeenteNijmegenCdkAppOptions: GemeenteNijmegenCdkAppOptions = { ... }
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.enableEmergencyProcedure">enableEmergencyProcedure</a></code> | <code>boolean</code> | Enable an additional workflow that allows branch protection bypass and will inform the team trough slack. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.enableRepositoryValidation">enableRepositoryValidation</a></code> | <code>boolean</code> | Enable an additional workflow that checks if the Github repository is configured according to the desired configuration for Gemeente Nijmegen. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.enableCfnLintOnGithub">enableCfnLintOnGithub</a></code> | <code>boolean</code> | Enable cfn-lint in the github build workflow. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.makeSampleFiles">makeSampleFiles</a></code> | <code>boolean</code> | Whether to create sample files. |
 
 ---
 
@@ -8920,6 +8921,21 @@ public readonly enableCfnLintOnGithub: boolean;
 - *Default:* true
 
 Enable cfn-lint in the github build workflow.
+
+---
+
+##### `makeSampleFiles`<sup>Optional</sup> <a name="makeSampleFiles" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.makeSampleFiles"></a>
+
+```typescript
+public readonly makeSampleFiles: boolean;
+```
+
+- *Type:* boolean
+- *Default:* false
+
+Whether to create sample files.
+
+Defaults to false to make sure older repos have unwanted files by default.
 
 ---
 

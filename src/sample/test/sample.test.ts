@@ -12,6 +12,7 @@ describe('GemeenteNijmegenCdkApp tests', () => {
     cdkVersion: '2.10.0',
     defaultReleaseBranch: 'main',
     name: 'TestProjectV1',
+    makeSampleFiles: true,
   });
   const snapshot = synthSnapshot(project);
 
