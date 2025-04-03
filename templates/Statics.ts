@@ -37,7 +37,7 @@ export class Statics {
 
   // MARK: account hostedzone
   static readonly accountHostedzonePath = '/gemeente-nijmegen/account/hostedzone';
-  static readonly accountHostedzoneName = '/gemeente-nijmegen/account/hostedzone/id';
-  static readonly accountHostedzoneId = '/gemeente-nijmegen/account/hostedzone/name';
+  static readonly accountHostedzoneName = '/gemeente-nijmegen/account/hostedzone/name';
+  static readonly accountHostedzoneId = '/gemeente-nijmegen/account/hostedzone/id';
 
 }
