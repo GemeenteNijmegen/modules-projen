@@ -152,11 +152,11 @@ export function setupSharedConfiguration(
 export function setupDefaultCdkOptions<T extends CombinedProjectOptions>(options: T) : T {
 
   /**
-   * Set default node runtime version to 18.X
+   * Set default node runtime version
    */
   options = {
     lambdaOptions: {
-      runtime: LambdaRuntime.NODEJS_20_X,
+      runtime: LambdaRuntime.NODEJS_22_X,
     },
     ...options,
   };
