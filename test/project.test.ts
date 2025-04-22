@@ -143,12 +143,12 @@ describe('Default lambda runtime for CDK app and lib', () => {
 
   test('CDK app has default lambda runtime', () => {
     const project = new GemeenteNijmegenCdkApp({ cdkVersion: '2.51.0', defaultReleaseBranch: 'main', name: 'test project', enableAutoMergeDependencies: false });
-    expect(project.configuredOptions().lambdaOptions?.runtime).toBe(LambdaRuntime.NODEJS_20_X);
+    expect(project.configuredOptions().lambdaOptions?.runtime).toBe(LambdaRuntime.NODEJS_22_X);
   });
 
   test('CDK lib has default lambda runtime', () => {
     const project = new GemeenteNijmegenCdkLib({ cdkVersion: '2.51.0', defaultReleaseBranch: 'main', name: 'test project', author: 'test', authorAddress: '', repositoryUrl: '', repository });
-    expect(project.configuredOptions().lambdaOptions?.runtime).toBe(LambdaRuntime.NODEJS_20_X);
+    expect(project.configuredOptions().lambdaOptions?.runtime).toBe(LambdaRuntime.NODEJS_22_X);
   });
 
 });
