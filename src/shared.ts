@@ -34,7 +34,7 @@ export interface GemeenteNijmegenOptions {
 }
 
 //type NpmPackageOptions = TypeScriptProjectOptions | AwsCdkConstructLibraryOptions | JsiiProjectOptions;
-export type CombinedProjectOptions = NodeProjectOptions & GemeenteNijmegenOptions
+export type CombinedProjectOptions = NodeProjectOptions & GemeenteNijmegenOptions;
 
 export function setDefaultValues<T extends CombinedProjectOptions>(options: T) : T {
 
