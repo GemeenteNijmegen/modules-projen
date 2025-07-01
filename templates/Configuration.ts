@@ -55,7 +55,7 @@ const configurations: Configuration[] = [
     criticality: new Criticality('medium'),
   },
   {
-    branchName: 'production',
+    branchName: 'main',
     buildEnvironment: Statics.buildEnvironment,
     deploymentEnvironment: Statics.productionEnvironment,
     criticality: new Criticality('high'),
@@ -84,23 +84,23 @@ export function getConfiguration(branchName: string): Configuration {
  * Options are in decreasing priority:
  * 1. BRANCH_NAME (set in AWS builds)
  * 2. GITHUB_BASE_REF (set in github PR workflow executions)
- * 3. defaultBanchToBuild that is provided as a parameter
+ * 3. defaultBranchToBuild that is provided as a parameter
  */
-export function getBranchToBuild(defaultBanchToBuild: string) {
+export function getBranchToBuild(defaultBranchToBuild: string) {
 
   const branchOptions = configurations.map(config => config.branchName);
   const githubBaseBranchName = process.env.GITHUB_BASE_REF;
   const environmentBranchName = process.env.BRANCH_NAME;
 
   // Low priority keep branch undefined
-  let build = defaultBanchToBuild;
+  let build = defaultBranchToBuild;
 
   // Midium priority branch name is set by github and is a valid option
   if (githubBaseBranchName && branchOptions.includes(githubBaseBranchName)) {
     build = githubBaseBranchName;
   }
 
-  // High prioroty if BRANCH_NAME env variable is set use it
+  // High priority if BRANCH_NAME env variable is set use it
   build = environmentBranchName ?? build;
 
   return build;
