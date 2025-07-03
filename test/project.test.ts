@@ -151,6 +151,12 @@ describe('Default lambda runtime for CDK app and lib', () => {
     expect(project.configuredOptions().lambdaOptions?.runtime).toBe(LambdaRuntime.NODEJS_22_X);
   });
 
+  test('CDK context cli-optout flag is set', () => {
+    const project = new GemeenteNijmegenCdkApp({ cdkVersion: '2.51.0', defaultReleaseBranch: 'main', name: 'test project', repository });
+    const snapshot = synthSnapshot(project)['cdk.json'];
+    expect(snapshot.context['cli-telemetry']).toBe(false);
+  });
+
 });
 
 describe('Error on no repository', () => {

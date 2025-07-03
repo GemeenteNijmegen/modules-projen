@@ -36,7 +36,7 @@ export interface GemeenteNijmegenOptions {
 //type NpmPackageOptions = TypeScriptProjectOptions | AwsCdkConstructLibraryOptions | JsiiProjectOptions;
 export type CombinedProjectOptions = NodeProjectOptions & GemeenteNijmegenOptions;
 
-export function setDefaultValues<T extends CombinedProjectOptions>(options: T) : T {
+export function setDefaultValues<T extends CombinedProjectOptions>(options: T): T {
 
   const enableAutoMergeDependencies = options.enableAutoMergeDependencies ?? true;
 
@@ -101,7 +101,7 @@ export function setDefaultValues<T extends CombinedProjectOptions>(options: T) :
 }
 
 
-export function setDefaultValuesNpmPublish<T extends CombinedProjectOptions>(options: T) : T {
+export function setDefaultValuesNpmPublish<T extends CombinedProjectOptions>(options: T): T {
   // Set defaults for publishing to npm.js
   if (!options.repository) {
     throw Error('Repository must be set to Github repo for succesfull NPM publishing. Add the `--repository` parameter when creating a new ts-lib project.');
@@ -149,12 +149,15 @@ export function setupSharedConfiguration(
 }
 
 
-export function setupDefaultCdkOptions<T extends CombinedProjectOptions>(options: T) : T {
+export function setupDefaultCdkOptions<T extends CombinedProjectOptions>(options: T): T {
 
   /**
    * Set default node runtime version
    */
   options = {
+    context: {
+      'cli-telemetry': false,
+    },
     lambdaOptions: {
       runtime: LambdaRuntime.NODEJS_22_X,
     },
