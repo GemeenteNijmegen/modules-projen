@@ -15,6 +15,7 @@ const project = new cdk.JsiiProject({
   release: true,
   releaseToNpm: true,
   npmAccess: NpmAccess.PUBLIC,
+  npmTrustedPublishing: true,
   devDeps: [
     'ts-node',
   ],
