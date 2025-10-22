@@ -111,6 +111,7 @@ export function setDefaultValuesNpmPublish<T extends CombinedProjectOptions>(opt
     release: true,
     releaseToNpm: true,
     npmAccess: NpmAccess.PUBLIC,
+    npmTrustedPublishing: true,
     ...options,
   };
   return options;
