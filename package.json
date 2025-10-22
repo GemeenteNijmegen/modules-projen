@@ -52,14 +52,14 @@
     "jsii-docgen": "^10.5.0",
     "jsii-pacmak": "^1.116.0",
     "jsii-rosetta": "~5.8.0",
-    "projen": "^0.98.2",
+    "projen": "^0.98.3",
     "ts-jest": "^27",
     "ts-node": "^10.9.2",
     "typescript": "^4.9.5"
   },
   "peerDependencies": {
     "constructs": "^10.4.2",
-    "projen": "^0.98.2"
+    "projen": "^0.98.3"
   },
   "main": "lib/index.js",
   "license": "EUPL-1.2",
