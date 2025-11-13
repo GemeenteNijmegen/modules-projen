@@ -6367,6 +6367,8 @@ const gemeenteNijmegenCdkAppOptions: GemeenteNijmegenCdkAppOptions = { ... }
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.workflowRunsOnGroup">workflowRunsOnGroup</a></code> | <code>projen.GroupRunnerOptions</code> | Github Runner Group selection options. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.defaultReleaseBranch">defaultReleaseBranch</a></code> | <code>string</code> | The name of the main release branch. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.artifactsDirectory">artifactsDirectory</a></code> | <code>string</code> | A directory which will contain build artifacts. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.auditDeps">auditDeps</a></code> | <code>boolean</code> | Run security audit on dependencies. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.auditDepsOptions">auditDepsOptions</a></code> | <code>projen.javascript.AuditOptions</code> | Security audit options. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.autoApproveUpgrades">autoApproveUpgrades</a></code> | <code>boolean</code> | Automatically approve deps upgrade PRs, allowing them to be merged by mergify (if configued). |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.biome">biome</a></code> | <code>boolean</code> | Setup Biome. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.biomeOptions">biomeOptions</a></code> | <code>projen.javascript.BiomeOptions</code> | Biome options. |
@@ -7896,6 +7898,36 @@ A directory which will contain build artifacts.
 
 ---
 
+##### `auditDeps`<sup>Optional</sup> <a name="auditDeps" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.auditDeps"></a>
+
+```typescript
+public readonly auditDeps: boolean;
+```
+
+- *Type:* boolean
+- *Default:* false
+
+Run security audit on dependencies.
+
+When enabled, creates an "audit" task that checks for known security vulnerabilities
+in dependencies. By default, runs during every build and checks for "high" severity
+vulnerabilities or above in all dependencies (including dev dependencies).
+
+---
+
+##### `auditDepsOptions`<sup>Optional</sup> <a name="auditDepsOptions" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.auditDepsOptions"></a>
+
+```typescript
+public readonly auditDepsOptions: AuditOptions;
+```
+
+- *Type:* projen.javascript.AuditOptions
+- *Default:* default options
+
+Security audit options.
+
+---
+
 ##### `autoApproveUpgrades`<sup>Optional</sup> <a name="autoApproveUpgrades" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.autoApproveUpgrades"></a>
 
 ```typescript
@@ -9187,6 +9219,8 @@ const gemeenteNijmegenCdkLibOptions: GemeenteNijmegenCdkLibOptions = { ... }
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.workflowRunsOnGroup">workflowRunsOnGroup</a></code> | <code>projen.GroupRunnerOptions</code> | Github Runner Group selection options. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.defaultReleaseBranch">defaultReleaseBranch</a></code> | <code>string</code> | The name of the main release branch. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.artifactsDirectory">artifactsDirectory</a></code> | <code>string</code> | A directory which will contain build artifacts. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.auditDeps">auditDeps</a></code> | <code>boolean</code> | Run security audit on dependencies. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.auditDepsOptions">auditDepsOptions</a></code> | <code>projen.javascript.AuditOptions</code> | Security audit options. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.autoApproveUpgrades">autoApproveUpgrades</a></code> | <code>boolean</code> | Automatically approve deps upgrade PRs, allowing them to be merged by mergify (if configued). |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.biome">biome</a></code> | <code>boolean</code> | Setup Biome. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.biomeOptions">biomeOptions</a></code> | <code>projen.javascript.BiomeOptions</code> | Biome options. |
@@ -10722,6 +10756,36 @@ A directory which will contain build artifacts.
 
 ---
 
+##### `auditDeps`<sup>Optional</sup> <a name="auditDeps" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.auditDeps"></a>
+
+```typescript
+public readonly auditDeps: boolean;
+```
+
+- *Type:* boolean
+- *Default:* false
+
+Run security audit on dependencies.
+
+When enabled, creates an "audit" task that checks for known security vulnerabilities
+in dependencies. By default, runs during every build and checks for "high" severity
+vulnerabilities or above in all dependencies (including dev dependencies).
+
+---
+
+##### `auditDepsOptions`<sup>Optional</sup> <a name="auditDepsOptions" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.auditDepsOptions"></a>
+
+```typescript
+public readonly auditDepsOptions: AuditOptions;
+```
+
+- *Type:* projen.javascript.AuditOptions
+- *Default:* default options
+
+Security audit options.
+
+---
+
 ##### `autoApproveUpgrades`<sup>Optional</sup> <a name="autoApproveUpgrades" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.autoApproveUpgrades"></a>
 
 ```typescript
@@ -12104,6 +12168,8 @@ const gemeenteNijmegenJsiiOptions: GemeenteNijmegenJsiiOptions = { ... }
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.workflowRunsOnGroup">workflowRunsOnGroup</a></code> | <code>projen.GroupRunnerOptions</code> | Github Runner Group selection options. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.defaultReleaseBranch">defaultReleaseBranch</a></code> | <code>string</code> | The name of the main release branch. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.artifactsDirectory">artifactsDirectory</a></code> | <code>string</code> | A directory which will contain build artifacts. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.auditDeps">auditDeps</a></code> | <code>boolean</code> | Run security audit on dependencies. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.auditDepsOptions">auditDepsOptions</a></code> | <code>projen.javascript.AuditOptions</code> | Security audit options. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.autoApproveUpgrades">autoApproveUpgrades</a></code> | <code>boolean</code> | Automatically approve deps upgrade PRs, allowing them to be merged by mergify (if configued). |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.biome">biome</a></code> | <code>boolean</code> | Setup Biome. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.biomeOptions">biomeOptions</a></code> | <code>projen.javascript.BiomeOptions</code> | Biome options. |
@@ -13623,6 +13689,36 @@ A directory which will contain build artifacts.
 
 ---
 
+##### `auditDeps`<sup>Optional</sup> <a name="auditDeps" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.auditDeps"></a>
+
+```typescript
+public readonly auditDeps: boolean;
+```
+
+- *Type:* boolean
+- *Default:* false
+
+Run security audit on dependencies.
+
+When enabled, creates an "audit" task that checks for known security vulnerabilities
+in dependencies. By default, runs during every build and checks for "high" severity
+vulnerabilities or above in all dependencies (including dev dependencies).
+
+---
+
+##### `auditDepsOptions`<sup>Optional</sup> <a name="auditDepsOptions" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.auditDepsOptions"></a>
+
+```typescript
+public readonly auditDepsOptions: AuditOptions;
+```
+
+- *Type:* projen.javascript.AuditOptions
+- *Default:* default options
+
+Security audit options.
+
+---
+
 ##### `autoApproveUpgrades`<sup>Optional</sup> <a name="autoApproveUpgrades" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.autoApproveUpgrades"></a>
 
 ```typescript
@@ -14824,6 +14920,8 @@ const gemeenteNijmegenTsPackageOptions: GemeenteNijmegenTsPackageOptions = { ...
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.workflowRunsOnGroup">workflowRunsOnGroup</a></code> | <code>projen.GroupRunnerOptions</code> | Github Runner Group selection options. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.defaultReleaseBranch">defaultReleaseBranch</a></code> | <code>string</code> | The name of the main release branch. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.artifactsDirectory">artifactsDirectory</a></code> | <code>string</code> | A directory which will contain build artifacts. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.auditDeps">auditDeps</a></code> | <code>boolean</code> | Run security audit on dependencies. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.auditDepsOptions">auditDepsOptions</a></code> | <code>projen.javascript.AuditOptions</code> | Security audit options. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.autoApproveUpgrades">autoApproveUpgrades</a></code> | <code>boolean</code> | Automatically approve deps upgrade PRs, allowing them to be merged by mergify (if configued). |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.biome">biome</a></code> | <code>boolean</code> | Setup Biome. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.biomeOptions">biomeOptions</a></code> | <code>projen.javascript.BiomeOptions</code> | Biome options. |
@@ -16324,6 +16422,36 @@ public readonly artifactsDirectory: string;
 - *Default:* "dist"
 
 A directory which will contain build artifacts.
+
+---
+
+##### `auditDeps`<sup>Optional</sup> <a name="auditDeps" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.auditDeps"></a>
+
+```typescript
+public readonly auditDeps: boolean;
+```
+
+- *Type:* boolean
+- *Default:* false
+
+Run security audit on dependencies.
+
+When enabled, creates an "audit" task that checks for known security vulnerabilities
+in dependencies. By default, runs during every build and checks for "high" severity
+vulnerabilities or above in all dependencies (including dev dependencies).
+
+---
+
+##### `auditDepsOptions`<sup>Optional</sup> <a name="auditDepsOptions" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.auditDepsOptions"></a>
+
+```typescript
+public readonly auditDepsOptions: AuditOptions;
+```
+
+- *Type:* projen.javascript.AuditOptions
+- *Default:* default options
+
+Security audit options.
 
 ---
 
