@@ -160,7 +160,7 @@ export function setupDefaultCdkOptions<T extends CombinedProjectOptions>(options
       'cli-telemetry': false,
     },
     lambdaOptions: {
-      runtime: LambdaRuntime.NODEJS_22_X,
+      runtime: LambdaRuntime.NODEJS_24_X,
     },
     ...options,
   };
