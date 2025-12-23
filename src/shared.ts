@@ -31,6 +31,11 @@ export interface GemeenteNijmegenOptions {
    */
   readonly enableRepositoryValidation?: boolean;
 
+  /**
+   * When set to false do not run the eslint workflow while doing nightly upgrades.
+   * @default true
+   */
+  readonly eslintOnUpgradeWorkload?: boolean;
 }
 
 //type NpmPackageOptions = TypeScriptProjectOptions | AwsCdkConstructLibraryOptions | JsiiProjectOptions;
@@ -147,6 +152,15 @@ export function setupSharedConfiguration(
   if (enableRepositoryValidation) {
     addRepositoryValidationJob(project, options);
   }
+
+  /**
+   * Add eslint step to dependency upgrades
+   */
+  if (options.eslintOnUpgradeWorkload !== false) {
+    project.tasks.tryFind('post-upgrade')?.reset('npx projen eslint');
+  }
+
+
 }
 
 
