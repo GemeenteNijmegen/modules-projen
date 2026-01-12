@@ -1,6 +1,7 @@
-import { LambdaRuntime } from 'projen/lib/awscdk';
+import { TextFile } from 'projen';
 import { NodeProject, NodeProjectOptions, NpmAccess } from 'projen/lib/javascript';
 import combine from './combine';
+import { Defaults } from './defaults';
 import { EmergencyProcedure } from './emergeny';
 import { addMergeJob } from './mergejob';
 import { addRepositoryValidationJob } from './validation';
@@ -31,6 +32,12 @@ export interface GemeenteNijmegenOptions {
    */
   readonly enableRepositoryValidation?: boolean;
 
+  /**
+   * Set the node version for .nvmrc and codebuild pipelines
+   */
+  readonly nvmNodeVersion?: string;
+
+
 }
 
 //type NpmPackageOptions = TypeScriptProjectOptions | AwsCdkConstructLibraryOptions | JsiiProjectOptions;
@@ -44,7 +51,8 @@ export function setDefaultValues<T extends CombinedProjectOptions>(options: T): 
    * Set default license
    */
   options = {
-    license: 'EUPL-1.2',
+    license: Defaults.DEFAULT_LICENSE,
+    nvmNodeVersion: Defaults.DEFAULT_NODE_VERSION,
     ...options,
   };
 
@@ -147,6 +155,13 @@ export function setupSharedConfiguration(
   if (enableRepositoryValidation) {
     addRepositoryValidationJob(project, options);
   }
+
+  /**
+   * Make .nvmrc file based on default nodeVersion of projenrc overwritten nodeVersion
+   */
+  new TextFile(project, '.nvmrc', {
+    lines: [options.nvmNodeVersion!],
+  });
 }
 
 
@@ -160,7 +175,7 @@ export function setupDefaultCdkOptions<T extends CombinedProjectOptions>(options
       'cli-telemetry': false,
     },
     lambdaOptions: {
-      runtime: LambdaRuntime.NODEJS_24_X,
+      runtime: Defaults.DEFAULT_LAMBDA_RUNTIME,
     },
     ...options,
   };
