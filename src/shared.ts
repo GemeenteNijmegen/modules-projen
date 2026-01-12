@@ -1,7 +1,7 @@
 import { TextFile } from 'projen';
-import { LambdaRuntime } from 'projen/lib/awscdk';
 import { NodeProject, NodeProjectOptions, NpmAccess } from 'projen/lib/javascript';
 import combine from './combine';
+import { Defaults } from './defaults';
 import { EmergencyProcedure } from './emergeny';
 import { addMergeJob } from './mergejob';
 import { addRepositoryValidationJob } from './validation';
@@ -51,8 +51,8 @@ export function setDefaultValues<T extends CombinedProjectOptions>(options: T): 
    * Set default license
    */
   options = {
-    license: 'EUPL-1.2',
-    nvmNodeVersion: '22',
+    license: Defaults.DEFAULT_LICENSE,
+    nvmNodeVersion: Defaults.DEFAULT_NODE_VERSION,
     ...options,
   };
 
@@ -175,7 +175,7 @@ export function setupDefaultCdkOptions<T extends CombinedProjectOptions>(options
       'cli-telemetry': false,
     },
     lambdaOptions: {
-      runtime: LambdaRuntime.NODEJS_24_X,
+      runtime: Defaults.DEFAULT_LAMBDA_RUNTIME,
     },
     ...options,
   };
