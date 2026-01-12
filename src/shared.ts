@@ -1,3 +1,4 @@
+import { TextFile, TextFileOptions } from 'projen';
 import { LambdaRuntime } from 'projen/lib/awscdk';
 import { NodeProject, NodeProjectOptions, NpmAccess } from 'projen/lib/javascript';
 import combine from './combine';
@@ -31,6 +32,12 @@ export interface GemeenteNijmegenOptions {
    */
   readonly enableRepositoryValidation?: boolean;
 
+  /**
+   * Set the node version for .nvmrc and codebuild pipelines
+   */
+  readonly nvmNodeVersion?: string;
+
+
 }
 
 //type NpmPackageOptions = TypeScriptProjectOptions | AwsCdkConstructLibraryOptions | JsiiProjectOptions;
@@ -45,6 +52,7 @@ export function setDefaultValues<T extends CombinedProjectOptions>(options: T): 
    */
   options = {
     license: 'EUPL-1.2',
+    nvmNodeVersion: '22',
     ...options,
   };
 
@@ -147,6 +155,15 @@ export function setupSharedConfiguration(
   if (enableRepositoryValidation) {
     addRepositoryValidationJob(project, options);
   }
+
+  /**
+   * Make .nvmrc file based on default nodeVersion of projenrc overwritten nodeVersion
+   * Add nvm use to pre-compile task to alsways run nvm use
+   */
+  new TextFile(project, '.nvmrc', {
+    lines: [options.nvmNodeVersion],
+  } as TextFileOptions);
+  project.tasks.tryFind('pre-compile')?.reset('nvm use');
 }
 
 
