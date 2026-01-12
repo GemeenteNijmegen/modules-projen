@@ -1,4 +1,4 @@
-import { TextFile, TextFileOptions } from 'projen';
+import { TextFile } from 'projen';
 import { LambdaRuntime } from 'projen/lib/awscdk';
 import { NodeProject, NodeProjectOptions, NpmAccess } from 'projen/lib/javascript';
 import combine from './combine';
@@ -158,12 +158,10 @@ export function setupSharedConfiguration(
 
   /**
    * Make .nvmrc file based on default nodeVersion of projenrc overwritten nodeVersion
-   * Add nvm use to pre-compile task to alsways run nvm use
    */
   new TextFile(project, '.nvmrc', {
-    lines: [options.nvmNodeVersion],
-  } as TextFileOptions);
-  project.tasks.tryFind('pre-compile')?.reset('nvm use');
+    lines: [options.nvmNodeVersion!],
+  });
 }
 
 
