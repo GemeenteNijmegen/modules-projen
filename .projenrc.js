@@ -20,7 +20,7 @@ const project = new cdk.JsiiProject({
     'ts-node',
   ],
   peerDeps: [
-    'projen@0.98.29', // Remove pinned version after updates
+    'projen',
     'constructs',
   ], // Make sure the consuming library will provide a projen version.
   packageName: packageName,
