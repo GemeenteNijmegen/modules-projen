@@ -162,6 +162,15 @@ export function setupSharedConfiguration(
   new TextFile(project, '.nvmrc', {
     lines: [options.nvmNodeVersion!],
   });
+
+  /**
+   * Add global eslint rules
+   */
+  (project as any).eslint?.addRules({
+    // Note: you must disable the base rule as it can report incorrect errors
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': 'error',
+  });
 }
 
 
