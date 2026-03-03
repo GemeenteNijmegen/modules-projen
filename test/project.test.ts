@@ -46,6 +46,13 @@ describe('NijmegenProject Defaults', () => {
     defaults.forEach(d => expect(ignore).toContain(d));
   });
 
+  test('ESLint unused vars rules are set', () => {
+    const eslintrc = snapshot['.eslintrc.json'];
+    expect(eslintrc).toBeDefined();
+
+    expect(eslintrc.rules['no-unused-vars']).toEqual('off');
+    expect(eslintrc.rules['@typescript-eslint/no-unused-vars']).toEqual('error');
+  });
 });
 
 
