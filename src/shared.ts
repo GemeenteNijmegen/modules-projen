@@ -72,6 +72,7 @@ export function setDefaultValues<T extends CombinedProjectOptions>(options: T): 
         labels: upgradeLabels,
         branches: [acceptanceBranchName],
       },
+      cooldown: 3,
     },
     ...options,
   };
