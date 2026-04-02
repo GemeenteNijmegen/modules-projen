@@ -1,4 +1,5 @@
 import { TextFile } from 'projen';
+import { GithubCredentials } from 'projen/lib/github';
 import { NodeProject, NodeProjectOptions, NpmAccess } from 'projen/lib/javascript';
 import combine from './combine';
 import { Defaults } from './defaults';
@@ -81,6 +82,7 @@ export function setDefaultValues<T extends CombinedProjectOptions>(options: T): 
    */
   options = {
     githubOptions: {
+      projenCredentials: GithubCredentials.fromApp(),
       mergify: false,
       pullRequestLintOptions: {
         semanticTitleOptions: {
