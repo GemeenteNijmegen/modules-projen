@@ -6454,6 +6454,7 @@ const gemeenteNijmegenCdkAppOptions: GemeenteNijmegenCdkAppOptions = { ... }
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.enableAutoMergeDependencies">enableAutoMergeDependencies</a></code> | <code>boolean</code> | Enable an additional workflow that auto-merges PR's with the 'auto-merge' label. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.enableEmergencyProcedure">enableEmergencyProcedure</a></code> | <code>boolean</code> | Enable an additional workflow that allows branch protection bypass and will inform the team trough slack. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.enableRepositoryValidation">enableRepositoryValidation</a></code> | <code>boolean</code> | Enable an additional workflow that checks if the Github repository is configured according to the desired configuration for Gemeente Nijmegen. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.nvmNodeVersion">nvmNodeVersion</a></code> | <code>string</code> | Set the node version for .nvmrc and codebuild pipelines. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.enableCfnLintOnGithub">enableCfnLintOnGithub</a></code> | <code>boolean</code> | Enable cfn-lint in the github build workflow. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.makeSampleFiles">makeSampleFiles</a></code> | <code>boolean</code> | Whether to create sample files. |
 
@@ -9095,6 +9096,18 @@ This includes emergency workflow, correct secrets, branch protection etc.
 
 ---
 
+##### `nvmNodeVersion`<sup>Optional</sup> <a name="nvmNodeVersion" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.nvmNodeVersion"></a>
+
+```typescript
+public readonly nvmNodeVersion: string;
+```
+
+- *Type:* string
+
+Set the node version for .nvmrc and codebuild pipelines.
+
+---
+
 ##### `enableCfnLintOnGithub`<sup>Optional</sup> <a name="enableCfnLintOnGithub" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.enableCfnLintOnGithub"></a>
 
 ```typescript
@@ -9328,6 +9341,7 @@ const gemeenteNijmegenCdkLibOptions: GemeenteNijmegenCdkLibOptions = { ... }
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.enableAutoMergeDependencies">enableAutoMergeDependencies</a></code> | <code>boolean</code> | Enable an additional workflow that auto-merges PR's with the 'auto-merge' label. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.enableEmergencyProcedure">enableEmergencyProcedure</a></code> | <code>boolean</code> | Enable an additional workflow that allows branch protection bypass and will inform the team trough slack. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.enableRepositoryValidation">enableRepositoryValidation</a></code> | <code>boolean</code> | Enable an additional workflow that checks if the Github repository is configured according to the desired configuration for Gemeente Nijmegen. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.nvmNodeVersion">nvmNodeVersion</a></code> | <code>string</code> | Set the node version for .nvmrc and codebuild pipelines. |
 
 ---
 
@@ -12086,6 +12100,18 @@ This includes emergency workflow, correct secrets, branch protection etc.
 
 ---
 
+##### `nvmNodeVersion`<sup>Optional</sup> <a name="nvmNodeVersion" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.nvmNodeVersion"></a>
+
+```typescript
+public readonly nvmNodeVersion: string;
+```
+
+- *Type:* string
+
+Set the node version for .nvmrc and codebuild pipelines.
+
+---
+
 ### GemeenteNijmegenJsiiOptions <a name="GemeenteNijmegenJsiiOptions" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions"></a>
 
 #### Initializer <a name="Initializer" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.Initializer"></a>
@@ -12275,6 +12301,7 @@ const gemeenteNijmegenJsiiOptions: GemeenteNijmegenJsiiOptions = { ... }
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.enableAutoMergeDependencies">enableAutoMergeDependencies</a></code> | <code>boolean</code> | Enable an additional workflow that auto-merges PR's with the 'auto-merge' label. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.enableEmergencyProcedure">enableEmergencyProcedure</a></code> | <code>boolean</code> | Enable an additional workflow that allows branch protection bypass and will inform the team trough slack. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.enableRepositoryValidation">enableRepositoryValidation</a></code> | <code>boolean</code> | Enable an additional workflow that checks if the Github repository is configured according to the desired configuration for Gemeente Nijmegen. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.nvmNodeVersion">nvmNodeVersion</a></code> | <code>string</code> | Set the node version for .nvmrc and codebuild pipelines. |
 
 ---
 
@@ -14789,6 +14816,18 @@ This includes emergency workflow, correct secrets, branch protection etc.
 
 ---
 
+##### `nvmNodeVersion`<sup>Optional</sup> <a name="nvmNodeVersion" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.nvmNodeVersion"></a>
+
+```typescript
+public readonly nvmNodeVersion: string;
+```
+
+- *Type:* string
+
+Set the node version for .nvmrc and codebuild pipelines.
+
+---
+
 ### GemeenteNijmegenOptions <a name="GemeenteNijmegenOptions" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenOptions"></a>
 
 #### Initializer <a name="Initializer" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenOptions.Initializer"></a>
@@ -14806,6 +14845,7 @@ const gemeenteNijmegenOptions: GemeenteNijmegenOptions = { ... }
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenOptions.property.enableAutoMergeDependencies">enableAutoMergeDependencies</a></code> | <code>boolean</code> | Enable an additional workflow that auto-merges PR's with the 'auto-merge' label. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenOptions.property.enableEmergencyProcedure">enableEmergencyProcedure</a></code> | <code>boolean</code> | Enable an additional workflow that allows branch protection bypass and will inform the team trough slack. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenOptions.property.enableRepositoryValidation">enableRepositoryValidation</a></code> | <code>boolean</code> | Enable an additional workflow that checks if the Github repository is configured according to the desired configuration for Gemeente Nijmegen. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenOptions.property.nvmNodeVersion">nvmNodeVersion</a></code> | <code>string</code> | Set the node version for .nvmrc and codebuild pipelines. |
 
 ---
 
@@ -14849,6 +14889,18 @@ public readonly enableRepositoryValidation: boolean;
 Enable an additional workflow that checks if the Github repository is configured according to the desired configuration for Gemeente Nijmegen.
 
 This includes emergency workflow, correct secrets, branch protection etc.
+
+---
+
+##### `nvmNodeVersion`<sup>Optional</sup> <a name="nvmNodeVersion" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenOptions.property.nvmNodeVersion"></a>
+
+```typescript
+public readonly nvmNodeVersion: string;
+```
+
+- *Type:* string
+
+Set the node version for .nvmrc and codebuild pipelines.
 
 ---
 
@@ -15025,6 +15077,7 @@ const gemeenteNijmegenTsPackageOptions: GemeenteNijmegenTsPackageOptions = { ...
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.enableAutoMergeDependencies">enableAutoMergeDependencies</a></code> | <code>boolean</code> | Enable an additional workflow that auto-merges PR's with the 'auto-merge' label. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.enableEmergencyProcedure">enableEmergencyProcedure</a></code> | <code>boolean</code> | Enable an additional workflow that allows branch protection bypass and will inform the team trough slack. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.enableRepositoryValidation">enableRepositoryValidation</a></code> | <code>boolean</code> | Enable an additional workflow that checks if the Github repository is configured according to the desired configuration for Gemeente Nijmegen. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.nvmNodeVersion">nvmNodeVersion</a></code> | <code>string</code> | Set the node version for .nvmrc and codebuild pipelines. |
 
 ---
 
@@ -17317,6 +17370,18 @@ public readonly enableRepositoryValidation: boolean;
 Enable an additional workflow that checks if the Github repository is configured according to the desired configuration for Gemeente Nijmegen.
 
 This includes emergency workflow, correct secrets, branch protection etc.
+
+---
+
+##### `nvmNodeVersion`<sup>Optional</sup> <a name="nvmNodeVersion" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.nvmNodeVersion"></a>
+
+```typescript
+public readonly nvmNodeVersion: string;
+```
+
+- *Type:* string
+
+Set the node version for .nvmrc and codebuild pipelines.
 
 ---
 
