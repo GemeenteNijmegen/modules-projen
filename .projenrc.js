@@ -1,4 +1,5 @@
 const { cdk } = require('projen');
+const { GithubCredentials } = require('projen/lib/github');
 const { NpmAccess } = require('projen/lib/javascript');
 
 const organizationName = '@gemeentenijmegen';
@@ -27,6 +28,9 @@ const project = new cdk.JsiiProject({
   scripts: {
     'extract': 'cd dist/js && rm -rf package && tar -xzvf projen-project-type@*',
     'bundle-templates': 'npx ts-node src/sample/bundletemplates.ts',
+  },
+  githubOptions: {
+    projenCredentials: GithubCredentials.fromApp(),
   },
 });
 
