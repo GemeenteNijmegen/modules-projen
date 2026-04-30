@@ -62,7 +62,6 @@ new GemeenteNijmegenCdkApp(options: GemeenteNijmegenCdkAppOptions)
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkApp.renderWorkflowSetup">renderWorkflowSetup</a></code> | Returns the set of workflow steps which should be executed to bootstrap a workflow. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkApp.setScript">setScript</a></code> | Replaces the contents of an npm package.json script. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkApp.addCdkDependency">addCdkDependency</a></code> | Adds an AWS CDK module dependencies. |
-| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkApp.configuredOptions">configuredOptions</a></code> | *No description.* |
 
 ---
 
@@ -619,12 +618,6 @@ Adds an AWS CDK module dependencies.
 The list of modules to depend on.
 
 ---
-
-##### `configuredOptions` <a name="configuredOptions" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkApp.configuredOptions"></a>
-
-```typescript
-public configuredOptions(): GemeenteNijmegenCdkAppOptions
-```
 
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>
 
@@ -1690,7 +1683,6 @@ new GemeenteNijmegenCdkLib(options: GemeenteNijmegenCdkLibOptions)
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLib.setScript">setScript</a></code> | Replaces the contents of an npm package.json script. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLib.addCdkDependencies">addCdkDependencies</a></code> | Adds dependencies to AWS CDK modules. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLib.addCdkTestDependencies">addCdkTestDependencies</a></code> | Adds AWS CDK modules as dev dependencies. |
-| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLib.configuredOptions">configuredOptions</a></code> | *No description.* |
 
 ---
 
@@ -2265,12 +2257,6 @@ Adds AWS CDK modules as dev dependencies.
 names of cdk modules (e.g. `@aws-cdk/aws-lambda`).
 
 ---
-
-##### `configuredOptions` <a name="configuredOptions" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLib.configuredOptions"></a>
-
-```typescript
-public configuredOptions(): GemeenteNijmegenCdkLibOptions
-```
 
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>
 
@@ -3308,7 +3294,6 @@ new GemeenteNijmegenJsii(options: GemeenteNijmegenJsiiOptions)
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsii.removeScript">removeScript</a></code> | Removes the npm script (always successful). |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsii.renderWorkflowSetup">renderWorkflowSetup</a></code> | Returns the set of workflow steps which should be executed to bootstrap a workflow. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsii.setScript">setScript</a></code> | Replaces the contents of an npm package.json script. |
-| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsii.configuredOptions">configuredOptions</a></code> | *No description.* |
 
 ---
 
@@ -3849,12 +3834,6 @@ The script name.
 The command to execute.
 
 ---
-
-##### `configuredOptions` <a name="configuredOptions" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsii.configuredOptions"></a>
-
-```typescript
-public configuredOptions(): GemeenteNijmegenJsiiOptions
-```
 
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>
 
@@ -4855,7 +4834,6 @@ new GemeenteNijmegenTsPackage(options: GemeenteNijmegenTsPackageOptions)
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackage.removeScript">removeScript</a></code> | Removes the npm script (always successful). |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackage.renderWorkflowSetup">renderWorkflowSetup</a></code> | Returns the set of workflow steps which should be executed to bootstrap a workflow. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackage.setScript">setScript</a></code> | Replaces the contents of an npm package.json script. |
-| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackage.configuredOptions">configuredOptions</a></code> | *No description.* |
 
 ---
 
@@ -5396,12 +5374,6 @@ The script name.
 The command to execute.
 
 ---
-
-##### `configuredOptions` <a name="configuredOptions" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackage.configuredOptions"></a>
-
-```typescript
-public configuredOptions(): GemeenteNijmegenTsPackageOptions
-```
 
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>
 
@@ -6366,7 +6338,6 @@ const gemeenteNijmegenCdkAppOptions: GemeenteNijmegenCdkAppOptions = { ... }
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.logging">logging</a></code> | <code>projen.LoggerOptions</code> | Configure logging options such as verbosity. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.outdir">outdir</a></code> | <code>string</code> | The root directory of the project. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.parent">parent</a></code> | <code>projen.Project</code> | The parent project, if this project is part of a bigger project. |
-| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.projectTree">projectTree</a></code> | <code>boolean</code> | Generate a project tree file (`.projen/tree.json`) that shows all components and their relationships. Useful for understanding your project structure and debugging. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.projenCommand">projenCommand</a></code> | <code>string</code> | The shell command to use in order to run the projen CLI. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.projenrcJson">projenrcJson</a></code> | <code>boolean</code> | Generate (once) .projenrc.json (in JSON). Set to `false` in order to disable .projenrc.json generation. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.projenrcJsonOptions">projenrcJsonOptions</a></code> | <code>projen.ProjenrcJsonOptions</code> | Options for .projenrc.json. |
@@ -6539,13 +6510,11 @@ const gemeenteNijmegenCdkAppOptions: GemeenteNijmegenCdkAppOptions = { ... }
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.lambdaAutoDiscover">lambdaAutoDiscover</a></code> | <code>boolean</code> | Automatically adds an `awscdk.LambdaFunction` for each `.lambda.ts` handler in your source tree. If this is disabled, you can manually add an `awscdk.AutoDiscover` component to your project. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.lambdaExtensionAutoDiscover">lambdaExtensionAutoDiscover</a></code> | <code>boolean</code> | Automatically adds an `awscdk.LambdaExtension` for each `.lambda-extension.ts` entrypoint in your source tree. If this is disabled, you can manually add an `awscdk.AutoDiscover` component to your project. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.lambdaOptions">lambdaOptions</a></code> | <code>projen.awscdk.LambdaFunctionCommonOptions</code> | Common options for all AWS Lambda functions. |
-| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.singletonLambdaAutoDiscover">singletonLambdaAutoDiscover</a></code> | <code>boolean</code> | Automatically adds an `awscdk.SingletonFunction` for each `.singleton-lambda.ts` handler in your source tree. If this is disabled, you can manually add an `awscdk.AutoDiscover` component to your project. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.enableAutoMergeDependencies">enableAutoMergeDependencies</a></code> | <code>boolean</code> | Enable an additional workflow that auto-merges PR's with the 'auto-merge' label. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.enableEmergencyProcedure">enableEmergencyProcedure</a></code> | <code>boolean</code> | Enable an additional workflow that allows branch protection bypass and will inform the team trough slack. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.enableRepositoryValidation">enableRepositoryValidation</a></code> | <code>boolean</code> | Enable an additional workflow that checks if the Github repository is configured according to the desired configuration for Gemeente Nijmegen. |
-| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.nvmNodeVersion">nvmNodeVersion</a></code> | <code>string</code> | Set the node version for .nvmrc and codebuild pipelines. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.repositoryValidationOptions">repositoryValidationOptions</a></code> | <code><a href="#@gemeentenijmegen/projen-project-type.RepositoryValidationOptions">RepositoryValidationOptions</a></code> | Properties for configuring the repsitory validation workflow. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.enableCfnLintOnGithub">enableCfnLintOnGithub</a></code> | <code>boolean</code> | Enable cfn-lint in the github build workflow. |
-| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.makeSampleFiles">makeSampleFiles</a></code> | <code>boolean</code> | Whether to create sample files. |
 
 ---
 
@@ -6640,19 +6609,6 @@ public readonly parent: Project;
 - *Type:* projen.Project
 
 The parent project, if this project is part of a bigger project.
-
----
-
-##### `projectTree`<sup>Optional</sup> <a name="projectTree" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.projectTree"></a>
-
-```typescript
-public readonly projectTree: boolean;
-```
-
-- *Type:* boolean
-- *Default:* false
-
-Generate a project tree file (`.projen/tree.json`) that shows all components and their relationships. Useful for understanding your project structure and debugging.
 
 ---
 
@@ -8904,7 +8860,7 @@ public readonly cdkVersion: string;
 ```
 
 - *Type:* string
-- *Default:* "2.189.1"
+- *Default:* "2.1.0"
 
 Minimum version of the AWS CDK to depend on.
 
@@ -9033,7 +8989,7 @@ public readonly constructsVersion: string;
 ```
 
 - *Type:* string
-- *Default:* for CDK 1.x the default is "3.2.27", for CDK 2.x the default is "10.5.1".
+- *Default:* for CDK 1.x the default is "3.2.27", for CDK 2.x the default is "10.0.5".
 
 Minimum version of the `constructs` library to depend on.
 
@@ -9142,19 +9098,6 @@ Common options for all AWS Lambda functions.
 
 ---
 
-##### `singletonLambdaAutoDiscover`<sup>Optional</sup> <a name="singletonLambdaAutoDiscover" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.singletonLambdaAutoDiscover"></a>
-
-```typescript
-public readonly singletonLambdaAutoDiscover: boolean;
-```
-
-- *Type:* boolean
-- *Default:* true
-
-Automatically adds an `awscdk.SingletonFunction` for each `.singleton-lambda.ts` handler in your source tree. If this is disabled, you can manually add an `awscdk.AutoDiscover` component to your project.
-
----
-
 ##### `enableAutoMergeDependencies`<sup>Optional</sup> <a name="enableAutoMergeDependencies" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.enableAutoMergeDependencies"></a>
 
 ```typescript
@@ -9198,15 +9141,15 @@ This includes emergency workflow, correct secrets, branch protection etc.
 
 ---
 
-##### `nvmNodeVersion`<sup>Optional</sup> <a name="nvmNodeVersion" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.nvmNodeVersion"></a>
+##### `repositoryValidationOptions`<sup>Optional</sup> <a name="repositoryValidationOptions" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.repositoryValidationOptions"></a>
 
 ```typescript
-public readonly nvmNodeVersion: string;
+public readonly repositoryValidationOptions: RepositoryValidationOptions;
 ```
 
-- *Type:* string
+- *Type:* <a href="#@gemeentenijmegen/projen-project-type.RepositoryValidationOptions">RepositoryValidationOptions</a>
 
-Set the node version for .nvmrc and codebuild pipelines.
+Properties for configuring the repsitory validation workflow.
 
 ---
 
@@ -9220,21 +9163,6 @@ public readonly enableCfnLintOnGithub: boolean;
 - *Default:* true
 
 Enable cfn-lint in the github build workflow.
-
----
-
-##### `makeSampleFiles`<sup>Optional</sup> <a name="makeSampleFiles" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.makeSampleFiles"></a>
-
-```typescript
-public readonly makeSampleFiles: boolean;
-```
-
-- *Type:* boolean
-- *Default:* false
-
-Whether to create sample files.
-
-Defaults to false to make sure older repos have unwanted files by default.
 
 ---
 
@@ -9259,7 +9187,6 @@ const gemeenteNijmegenCdkLibOptions: GemeenteNijmegenCdkLibOptions = { ... }
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.logging">logging</a></code> | <code>projen.LoggerOptions</code> | Configure logging options such as verbosity. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.outdir">outdir</a></code> | <code>string</code> | The root directory of the project. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.parent">parent</a></code> | <code>projen.Project</code> | The parent project, if this project is part of a bigger project. |
-| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.projectTree">projectTree</a></code> | <code>boolean</code> | Generate a project tree file (`.projen/tree.json`) that shows all components and their relationships. Useful for understanding your project structure and debugging. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.projenCommand">projenCommand</a></code> | <code>string</code> | The shell command to use in order to run the projen CLI. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.projenrcJson">projenrcJson</a></code> | <code>boolean</code> | Generate (once) .projenrc.json (in JSON). Set to `false` in order to disable .projenrc.json generation. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.projenrcJsonOptions">projenrcJsonOptions</a></code> | <code>projen.ProjenrcJsonOptions</code> | Options for .projenrc.json. |
@@ -9440,11 +9367,10 @@ const gemeenteNijmegenCdkLibOptions: GemeenteNijmegenCdkLibOptions = { ... }
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.lambdaAutoDiscover">lambdaAutoDiscover</a></code> | <code>boolean</code> | Automatically adds an `aws_lambda.Function` for each `.lambda.ts` handler in your source tree. If this is disabled, you either need to explicitly call `aws_lambda.Function.autoDiscover()` or define a `new aws_lambda.Function()` for each handler. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.lambdaExtensionAutoDiscover">lambdaExtensionAutoDiscover</a></code> | <code>boolean</code> | Automatically adds an `awscdk.LambdaExtension` for each `.lambda-extension.ts` entrypoint in your source tree. If this is disabled, you can manually add an `awscdk.AutoDiscover` component to your project. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.lambdaOptions">lambdaOptions</a></code> | <code>projen.awscdk.LambdaFunctionCommonOptions</code> | Common options for all AWS Lambda functions. |
-| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.singletonLambdaAutoDiscover">singletonLambdaAutoDiscover</a></code> | <code>boolean</code> | Automatically adds an `awscdk.SingletonFunction` for each `.singleton-lambda.ts` handler in your source tree. If this is disabled, you can manually add an `awscdk.AutoDiscover` component to your project. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.enableAutoMergeDependencies">enableAutoMergeDependencies</a></code> | <code>boolean</code> | Enable an additional workflow that auto-merges PR's with the 'auto-merge' label. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.enableEmergencyProcedure">enableEmergencyProcedure</a></code> | <code>boolean</code> | Enable an additional workflow that allows branch protection bypass and will inform the team trough slack. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.enableRepositoryValidation">enableRepositoryValidation</a></code> | <code>boolean</code> | Enable an additional workflow that checks if the Github repository is configured according to the desired configuration for Gemeente Nijmegen. |
-| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.nvmNodeVersion">nvmNodeVersion</a></code> | <code>string</code> | Set the node version for .nvmrc and codebuild pipelines. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.repositoryValidationOptions">repositoryValidationOptions</a></code> | <code><a href="#@gemeentenijmegen/projen-project-type.RepositoryValidationOptions">RepositoryValidationOptions</a></code> | Properties for configuring the repsitory validation workflow. |
 
 ---
 
@@ -9539,19 +9465,6 @@ public readonly parent: Project;
 - *Type:* projen.Project
 
 The parent project, if this project is part of a bigger project.
-
----
-
-##### `projectTree`<sup>Optional</sup> <a name="projectTree" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.projectTree"></a>
-
-```typescript
-public readonly projectTree: boolean;
-```
-
-- *Type:* boolean
-- *Default:* false
-
-Generate a project tree file (`.projen/tree.json`) that shows all components and their relationships. Useful for understanding your project structure and debugging.
 
 ---
 
@@ -11828,7 +11741,7 @@ public readonly jsiiVersion: string;
 ```
 
 - *Type:* string
-- *Default:* "~5.9.0"
+- *Default:* "~5.8.0"
 
 Version of the jsii compiler to use.
 
@@ -11947,7 +11860,7 @@ public readonly cdkVersion: string;
 ```
 
 - *Type:* string
-- *Default:* "2.189.1"
+- *Default:* "2.1.0"
 
 Minimum version of the AWS CDK to depend on.
 
@@ -12076,7 +11989,7 @@ public readonly constructsVersion: string;
 ```
 
 - *Type:* string
-- *Default:* for CDK 1.x the default is "3.2.27", for CDK 2.x the default is "10.5.1".
+- *Default:* for CDK 1.x the default is "3.2.27", for CDK 2.x the default is "10.0.5".
 
 Minimum version of the `constructs` library to depend on.
 
@@ -12160,19 +12073,6 @@ Common options for all AWS Lambda functions.
 
 ---
 
-##### `singletonLambdaAutoDiscover`<sup>Optional</sup> <a name="singletonLambdaAutoDiscover" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.singletonLambdaAutoDiscover"></a>
-
-```typescript
-public readonly singletonLambdaAutoDiscover: boolean;
-```
-
-- *Type:* boolean
-- *Default:* true
-
-Automatically adds an `awscdk.SingletonFunction` for each `.singleton-lambda.ts` handler in your source tree. If this is disabled, you can manually add an `awscdk.AutoDiscover` component to your project.
-
----
-
 ##### `enableAutoMergeDependencies`<sup>Optional</sup> <a name="enableAutoMergeDependencies" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.enableAutoMergeDependencies"></a>
 
 ```typescript
@@ -12216,15 +12116,15 @@ This includes emergency workflow, correct secrets, branch protection etc.
 
 ---
 
-##### `nvmNodeVersion`<sup>Optional</sup> <a name="nvmNodeVersion" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.nvmNodeVersion"></a>
+##### `repositoryValidationOptions`<sup>Optional</sup> <a name="repositoryValidationOptions" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.repositoryValidationOptions"></a>
 
 ```typescript
-public readonly nvmNodeVersion: string;
+public readonly repositoryValidationOptions: RepositoryValidationOptions;
 ```
 
-- *Type:* string
+- *Type:* <a href="#@gemeentenijmegen/projen-project-type.RepositoryValidationOptions">RepositoryValidationOptions</a>
 
-Set the node version for .nvmrc and codebuild pipelines.
+Properties for configuring the repsitory validation workflow.
 
 ---
 
@@ -12249,7 +12149,6 @@ const gemeenteNijmegenJsiiOptions: GemeenteNijmegenJsiiOptions = { ... }
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.logging">logging</a></code> | <code>projen.LoggerOptions</code> | Configure logging options such as verbosity. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.outdir">outdir</a></code> | <code>string</code> | The root directory of the project. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.parent">parent</a></code> | <code>projen.Project</code> | The parent project, if this project is part of a bigger project. |
-| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.projectTree">projectTree</a></code> | <code>boolean</code> | Generate a project tree file (`.projen/tree.json`) that shows all components and their relationships. Useful for understanding your project structure and debugging. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.projenCommand">projenCommand</a></code> | <code>string</code> | The shell command to use in order to run the projen CLI. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.projenrcJson">projenrcJson</a></code> | <code>boolean</code> | Generate (once) .projenrc.json (in JSON). Set to `false` in order to disable .projenrc.json generation. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.projenrcJsonOptions">projenrcJsonOptions</a></code> | <code>projen.ProjenrcJsonOptions</code> | Options for .projenrc.json. |
@@ -12417,7 +12316,7 @@ const gemeenteNijmegenJsiiOptions: GemeenteNijmegenJsiiOptions = { ... }
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.enableAutoMergeDependencies">enableAutoMergeDependencies</a></code> | <code>boolean</code> | Enable an additional workflow that auto-merges PR's with the 'auto-merge' label. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.enableEmergencyProcedure">enableEmergencyProcedure</a></code> | <code>boolean</code> | Enable an additional workflow that allows branch protection bypass and will inform the team trough slack. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.enableRepositoryValidation">enableRepositoryValidation</a></code> | <code>boolean</code> | Enable an additional workflow that checks if the Github repository is configured according to the desired configuration for Gemeente Nijmegen. |
-| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.nvmNodeVersion">nvmNodeVersion</a></code> | <code>string</code> | Set the node version for .nvmrc and codebuild pipelines. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.repositoryValidationOptions">repositoryValidationOptions</a></code> | <code><a href="#@gemeentenijmegen/projen-project-type.RepositoryValidationOptions">RepositoryValidationOptions</a></code> | Properties for configuring the repsitory validation workflow. |
 
 ---
 
@@ -12512,19 +12411,6 @@ public readonly parent: Project;
 - *Type:* projen.Project
 
 The parent project, if this project is part of a bigger project.
-
----
-
-##### `projectTree`<sup>Optional</sup> <a name="projectTree" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.projectTree"></a>
-
-```typescript
-public readonly projectTree: boolean;
-```
-
-- *Type:* boolean
-- *Default:* false
-
-Generate a project tree file (`.projen/tree.json`) that shows all components and their relationships. Useful for understanding your project structure and debugging.
 
 ---
 
@@ -14801,7 +14687,7 @@ public readonly jsiiVersion: string;
 ```
 
 - *Type:* string
-- *Default:* "~5.9.0"
+- *Default:* "~5.8.0"
 
 Version of the jsii compiler to use.
 
@@ -14932,15 +14818,15 @@ This includes emergency workflow, correct secrets, branch protection etc.
 
 ---
 
-##### `nvmNodeVersion`<sup>Optional</sup> <a name="nvmNodeVersion" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.nvmNodeVersion"></a>
+##### `repositoryValidationOptions`<sup>Optional</sup> <a name="repositoryValidationOptions" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.repositoryValidationOptions"></a>
 
 ```typescript
-public readonly nvmNodeVersion: string;
+public readonly repositoryValidationOptions: RepositoryValidationOptions;
 ```
 
-- *Type:* string
+- *Type:* <a href="#@gemeentenijmegen/projen-project-type.RepositoryValidationOptions">RepositoryValidationOptions</a>
 
-Set the node version for .nvmrc and codebuild pipelines.
+Properties for configuring the repsitory validation workflow.
 
 ---
 
@@ -14961,7 +14847,7 @@ const gemeenteNijmegenOptions: GemeenteNijmegenOptions = { ... }
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenOptions.property.enableAutoMergeDependencies">enableAutoMergeDependencies</a></code> | <code>boolean</code> | Enable an additional workflow that auto-merges PR's with the 'auto-merge' label. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenOptions.property.enableEmergencyProcedure">enableEmergencyProcedure</a></code> | <code>boolean</code> | Enable an additional workflow that allows branch protection bypass and will inform the team trough slack. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenOptions.property.enableRepositoryValidation">enableRepositoryValidation</a></code> | <code>boolean</code> | Enable an additional workflow that checks if the Github repository is configured according to the desired configuration for Gemeente Nijmegen. |
-| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenOptions.property.nvmNodeVersion">nvmNodeVersion</a></code> | <code>string</code> | Set the node version for .nvmrc and codebuild pipelines. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenOptions.property.repositoryValidationOptions">repositoryValidationOptions</a></code> | <code><a href="#@gemeentenijmegen/projen-project-type.RepositoryValidationOptions">RepositoryValidationOptions</a></code> | Properties for configuring the repsitory validation workflow. |
 
 ---
 
@@ -15008,15 +14894,15 @@ This includes emergency workflow, correct secrets, branch protection etc.
 
 ---
 
-##### `nvmNodeVersion`<sup>Optional</sup> <a name="nvmNodeVersion" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenOptions.property.nvmNodeVersion"></a>
+##### `repositoryValidationOptions`<sup>Optional</sup> <a name="repositoryValidationOptions" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenOptions.property.repositoryValidationOptions"></a>
 
 ```typescript
-public readonly nvmNodeVersion: string;
+public readonly repositoryValidationOptions: RepositoryValidationOptions;
 ```
 
-- *Type:* string
+- *Type:* <a href="#@gemeentenijmegen/projen-project-type.RepositoryValidationOptions">RepositoryValidationOptions</a>
 
-Set the node version for .nvmrc and codebuild pipelines.
+Properties for configuring the repsitory validation workflow.
 
 ---
 
@@ -15041,7 +14927,6 @@ const gemeenteNijmegenTsPackageOptions: GemeenteNijmegenTsPackageOptions = { ...
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.logging">logging</a></code> | <code>projen.LoggerOptions</code> | Configure logging options such as verbosity. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.outdir">outdir</a></code> | <code>string</code> | The root directory of the project. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.parent">parent</a></code> | <code>projen.Project</code> | The parent project, if this project is part of a bigger project. |
-| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.projectTree">projectTree</a></code> | <code>boolean</code> | Generate a project tree file (`.projen/tree.json`) that shows all components and their relationships. Useful for understanding your project structure and debugging. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.projenCommand">projenCommand</a></code> | <code>string</code> | The shell command to use in order to run the projen CLI. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.projenrcJson">projenrcJson</a></code> | <code>boolean</code> | Generate (once) .projenrc.json (in JSON). Set to `false` in order to disable .projenrc.json generation. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.projenrcJsonOptions">projenrcJsonOptions</a></code> | <code>projen.ProjenrcJsonOptions</code> | Options for .projenrc.json. |
@@ -15193,7 +15078,7 @@ const gemeenteNijmegenTsPackageOptions: GemeenteNijmegenTsPackageOptions = { ...
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.enableAutoMergeDependencies">enableAutoMergeDependencies</a></code> | <code>boolean</code> | Enable an additional workflow that auto-merges PR's with the 'auto-merge' label. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.enableEmergencyProcedure">enableEmergencyProcedure</a></code> | <code>boolean</code> | Enable an additional workflow that allows branch protection bypass and will inform the team trough slack. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.enableRepositoryValidation">enableRepositoryValidation</a></code> | <code>boolean</code> | Enable an additional workflow that checks if the Github repository is configured according to the desired configuration for Gemeente Nijmegen. |
-| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.nvmNodeVersion">nvmNodeVersion</a></code> | <code>string</code> | Set the node version for .nvmrc and codebuild pipelines. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.repositoryValidationOptions">repositoryValidationOptions</a></code> | <code><a href="#@gemeentenijmegen/projen-project-type.RepositoryValidationOptions">RepositoryValidationOptions</a></code> | Properties for configuring the repsitory validation workflow. |
 
 ---
 
@@ -15288,19 +15173,6 @@ public readonly parent: Project;
 - *Type:* projen.Project
 
 The parent project, if this project is part of a bigger project.
-
----
-
-##### `projectTree`<sup>Optional</sup> <a name="projectTree" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.projectTree"></a>
-
-```typescript
-public readonly projectTree: boolean;
-```
-
-- *Type:* boolean
-- *Default:* false
-
-Generate a project tree file (`.projen/tree.json`) that shows all components and their relationships. Useful for understanding your project structure and debugging.
 
 ---
 
@@ -17489,15 +17361,86 @@ This includes emergency workflow, correct secrets, branch protection etc.
 
 ---
 
-##### `nvmNodeVersion`<sup>Optional</sup> <a name="nvmNodeVersion" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.nvmNodeVersion"></a>
+##### `repositoryValidationOptions`<sup>Optional</sup> <a name="repositoryValidationOptions" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.repositoryValidationOptions"></a>
 
 ```typescript
-public readonly nvmNodeVersion: string;
+public readonly repositoryValidationOptions: RepositoryValidationOptions;
+```
+
+- *Type:* <a href="#@gemeentenijmegen/projen-project-type.RepositoryValidationOptions">RepositoryValidationOptions</a>
+
+Properties for configuring the repsitory validation workflow.
+
+---
+
+### RepositoryValidationOptions <a name="RepositoryValidationOptions" id="@gemeentenijmegen/projen-project-type.RepositoryValidationOptions"></a>
+
+Repository validation workflow configuration options.
+
+#### Initializer <a name="Initializer" id="@gemeentenijmegen/projen-project-type.RepositoryValidationOptions.Initializer"></a>
+
+```typescript
+import { RepositoryValidationOptions } from '@gemeentenijmegen/projen-project-type'
+
+const repositoryValidationOptions: RepositoryValidationOptions = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@gemeentenijmegen/projen-project-type.RepositoryValidationOptions.property.checkAcceptanceBranch">checkAcceptanceBranch</a></code> | <code>boolean</code> | Check if acceptance branch requires the correct checks. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.RepositoryValidationOptions.property.emergencyWorkflow">emergencyWorkflow</a></code> | <code>boolean</code> | Check if the emergency worflow is deployed and if the webhook url secret is set. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.RepositoryValidationOptions.property.publishToNpm">publishToNpm</a></code> | <code>boolean</code> | Check if the NPM_TOKEN secret is configured. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.RepositoryValidationOptions.property.upgradeBranch">upgradeBranch</a></code> | <code>string</code> | Checks if the upgrade workflow is set for this branch. |
+
+---
+
+##### `checkAcceptanceBranch`<sup>Optional</sup> <a name="checkAcceptanceBranch" id="@gemeentenijmegen/projen-project-type.RepositoryValidationOptions.property.checkAcceptanceBranch"></a>
+
+```typescript
+public readonly checkAcceptanceBranch: boolean;
+```
+
+- *Type:* boolean
+
+Check if acceptance branch requires the correct checks.
+
+---
+
+##### `emergencyWorkflow`<sup>Optional</sup> <a name="emergencyWorkflow" id="@gemeentenijmegen/projen-project-type.RepositoryValidationOptions.property.emergencyWorkflow"></a>
+
+```typescript
+public readonly emergencyWorkflow: boolean;
+```
+
+- *Type:* boolean
+
+Check if the emergency worflow is deployed and if the webhook url secret is set.
+
+---
+
+##### `publishToNpm`<sup>Optional</sup> <a name="publishToNpm" id="@gemeentenijmegen/projen-project-type.RepositoryValidationOptions.property.publishToNpm"></a>
+
+```typescript
+public readonly publishToNpm: boolean;
+```
+
+- *Type:* boolean
+
+Check if the NPM_TOKEN secret is configured.
+
+---
+
+##### `upgradeBranch`<sup>Optional</sup> <a name="upgradeBranch" id="@gemeentenijmegen/projen-project-type.RepositoryValidationOptions.property.upgradeBranch"></a>
+
+```typescript
+public readonly upgradeBranch: string;
 ```
 
 - *Type:* string
 
-Set the node version for .nvmrc and codebuild pipelines.
+Checks if the upgrade workflow is set for this branch.
 
 ---
 
