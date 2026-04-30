@@ -62,6 +62,7 @@ new GemeenteNijmegenCdkApp(options: GemeenteNijmegenCdkAppOptions)
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkApp.renderWorkflowSetup">renderWorkflowSetup</a></code> | Returns the set of workflow steps which should be executed to bootstrap a workflow. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkApp.setScript">setScript</a></code> | Replaces the contents of an npm package.json script. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkApp.addCdkDependency">addCdkDependency</a></code> | Adds an AWS CDK module dependencies. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkApp.configuredOptions">configuredOptions</a></code> | *No description.* |
 
 ---
 
@@ -618,6 +619,12 @@ Adds an AWS CDK module dependencies.
 The list of modules to depend on.
 
 ---
+
+##### `configuredOptions` <a name="configuredOptions" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkApp.configuredOptions"></a>
+
+```typescript
+public configuredOptions(): GemeenteNijmegenCdkAppOptions
+```
 
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>
 
@@ -1683,6 +1690,7 @@ new GemeenteNijmegenCdkLib(options: GemeenteNijmegenCdkLibOptions)
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLib.setScript">setScript</a></code> | Replaces the contents of an npm package.json script. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLib.addCdkDependencies">addCdkDependencies</a></code> | Adds dependencies to AWS CDK modules. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLib.addCdkTestDependencies">addCdkTestDependencies</a></code> | Adds AWS CDK modules as dev dependencies. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLib.configuredOptions">configuredOptions</a></code> | *No description.* |
 
 ---
 
@@ -2257,6 +2265,12 @@ Adds AWS CDK modules as dev dependencies.
 names of cdk modules (e.g. `@aws-cdk/aws-lambda`).
 
 ---
+
+##### `configuredOptions` <a name="configuredOptions" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLib.configuredOptions"></a>
+
+```typescript
+public configuredOptions(): GemeenteNijmegenCdkLibOptions
+```
 
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>
 
@@ -3294,6 +3308,7 @@ new GemeenteNijmegenJsii(options: GemeenteNijmegenJsiiOptions)
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsii.removeScript">removeScript</a></code> | Removes the npm script (always successful). |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsii.renderWorkflowSetup">renderWorkflowSetup</a></code> | Returns the set of workflow steps which should be executed to bootstrap a workflow. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsii.setScript">setScript</a></code> | Replaces the contents of an npm package.json script. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsii.configuredOptions">configuredOptions</a></code> | *No description.* |
 
 ---
 
@@ -3834,6 +3849,12 @@ The script name.
 The command to execute.
 
 ---
+
+##### `configuredOptions` <a name="configuredOptions" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsii.configuredOptions"></a>
+
+```typescript
+public configuredOptions(): GemeenteNijmegenJsiiOptions
+```
 
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>
 
@@ -4834,6 +4855,7 @@ new GemeenteNijmegenTsPackage(options: GemeenteNijmegenTsPackageOptions)
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackage.removeScript">removeScript</a></code> | Removes the npm script (always successful). |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackage.renderWorkflowSetup">renderWorkflowSetup</a></code> | Returns the set of workflow steps which should be executed to bootstrap a workflow. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackage.setScript">setScript</a></code> | Replaces the contents of an npm package.json script. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackage.configuredOptions">configuredOptions</a></code> | *No description.* |
 
 ---
 
@@ -5374,6 +5396,12 @@ The script name.
 The command to execute.
 
 ---
+
+##### `configuredOptions` <a name="configuredOptions" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackage.configuredOptions"></a>
+
+```typescript
+public configuredOptions(): GemeenteNijmegenTsPackageOptions
+```
 
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>
 
@@ -6513,8 +6541,9 @@ const gemeenteNijmegenCdkAppOptions: GemeenteNijmegenCdkAppOptions = { ... }
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.enableAutoMergeDependencies">enableAutoMergeDependencies</a></code> | <code>boolean</code> | Enable an additional workflow that auto-merges PR's with the 'auto-merge' label. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.enableEmergencyProcedure">enableEmergencyProcedure</a></code> | <code>boolean</code> | Enable an additional workflow that allows branch protection bypass and will inform the team trough slack. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.enableRepositoryValidation">enableRepositoryValidation</a></code> | <code>boolean</code> | Enable an additional workflow that checks if the Github repository is configured according to the desired configuration for Gemeente Nijmegen. |
-| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.repositoryValidationOptions">repositoryValidationOptions</a></code> | <code><a href="#@gemeentenijmegen/projen-project-type.RepositoryValidationOptions">RepositoryValidationOptions</a></code> | Properties for configuring the repsitory validation workflow. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.nvmNodeVersion">nvmNodeVersion</a></code> | <code>string</code> | Set the node version for .nvmrc and codebuild pipelines. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.enableCfnLintOnGithub">enableCfnLintOnGithub</a></code> | <code>boolean</code> | Enable cfn-lint in the github build workflow. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.makeSampleFiles">makeSampleFiles</a></code> | <code>boolean</code> | Whether to create sample files. |
 
 ---
 
@@ -9141,15 +9170,15 @@ This includes emergency workflow, correct secrets, branch protection etc.
 
 ---
 
-##### `repositoryValidationOptions`<sup>Optional</sup> <a name="repositoryValidationOptions" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.repositoryValidationOptions"></a>
+##### `nvmNodeVersion`<sup>Optional</sup> <a name="nvmNodeVersion" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.nvmNodeVersion"></a>
 
 ```typescript
-public readonly repositoryValidationOptions: RepositoryValidationOptions;
+public readonly nvmNodeVersion: string;
 ```
 
-- *Type:* <a href="#@gemeentenijmegen/projen-project-type.RepositoryValidationOptions">RepositoryValidationOptions</a>
+- *Type:* string
 
-Properties for configuring the repsitory validation workflow.
+Set the node version for .nvmrc and codebuild pipelines.
 
 ---
 
@@ -9163,6 +9192,21 @@ public readonly enableCfnLintOnGithub: boolean;
 - *Default:* true
 
 Enable cfn-lint in the github build workflow.
+
+---
+
+##### `makeSampleFiles`<sup>Optional</sup> <a name="makeSampleFiles" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.makeSampleFiles"></a>
+
+```typescript
+public readonly makeSampleFiles: boolean;
+```
+
+- *Type:* boolean
+- *Default:* false
+
+Whether to create sample files.
+
+Defaults to false to make sure older repos have unwanted files by default.
 
 ---
 
@@ -9370,7 +9414,7 @@ const gemeenteNijmegenCdkLibOptions: GemeenteNijmegenCdkLibOptions = { ... }
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.enableAutoMergeDependencies">enableAutoMergeDependencies</a></code> | <code>boolean</code> | Enable an additional workflow that auto-merges PR's with the 'auto-merge' label. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.enableEmergencyProcedure">enableEmergencyProcedure</a></code> | <code>boolean</code> | Enable an additional workflow that allows branch protection bypass and will inform the team trough slack. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.enableRepositoryValidation">enableRepositoryValidation</a></code> | <code>boolean</code> | Enable an additional workflow that checks if the Github repository is configured according to the desired configuration for Gemeente Nijmegen. |
-| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.repositoryValidationOptions">repositoryValidationOptions</a></code> | <code><a href="#@gemeentenijmegen/projen-project-type.RepositoryValidationOptions">RepositoryValidationOptions</a></code> | Properties for configuring the repsitory validation workflow. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.nvmNodeVersion">nvmNodeVersion</a></code> | <code>string</code> | Set the node version for .nvmrc and codebuild pipelines. |
 
 ---
 
@@ -12116,15 +12160,15 @@ This includes emergency workflow, correct secrets, branch protection etc.
 
 ---
 
-##### `repositoryValidationOptions`<sup>Optional</sup> <a name="repositoryValidationOptions" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.repositoryValidationOptions"></a>
+##### `nvmNodeVersion`<sup>Optional</sup> <a name="nvmNodeVersion" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.nvmNodeVersion"></a>
 
 ```typescript
-public readonly repositoryValidationOptions: RepositoryValidationOptions;
+public readonly nvmNodeVersion: string;
 ```
 
-- *Type:* <a href="#@gemeentenijmegen/projen-project-type.RepositoryValidationOptions">RepositoryValidationOptions</a>
+- *Type:* string
 
-Properties for configuring the repsitory validation workflow.
+Set the node version for .nvmrc and codebuild pipelines.
 
 ---
 
@@ -12316,7 +12360,7 @@ const gemeenteNijmegenJsiiOptions: GemeenteNijmegenJsiiOptions = { ... }
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.enableAutoMergeDependencies">enableAutoMergeDependencies</a></code> | <code>boolean</code> | Enable an additional workflow that auto-merges PR's with the 'auto-merge' label. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.enableEmergencyProcedure">enableEmergencyProcedure</a></code> | <code>boolean</code> | Enable an additional workflow that allows branch protection bypass and will inform the team trough slack. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.enableRepositoryValidation">enableRepositoryValidation</a></code> | <code>boolean</code> | Enable an additional workflow that checks if the Github repository is configured according to the desired configuration for Gemeente Nijmegen. |
-| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.repositoryValidationOptions">repositoryValidationOptions</a></code> | <code><a href="#@gemeentenijmegen/projen-project-type.RepositoryValidationOptions">RepositoryValidationOptions</a></code> | Properties for configuring the repsitory validation workflow. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.nvmNodeVersion">nvmNodeVersion</a></code> | <code>string</code> | Set the node version for .nvmrc and codebuild pipelines. |
 
 ---
 
@@ -14818,15 +14862,15 @@ This includes emergency workflow, correct secrets, branch protection etc.
 
 ---
 
-##### `repositoryValidationOptions`<sup>Optional</sup> <a name="repositoryValidationOptions" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.repositoryValidationOptions"></a>
+##### `nvmNodeVersion`<sup>Optional</sup> <a name="nvmNodeVersion" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.nvmNodeVersion"></a>
 
 ```typescript
-public readonly repositoryValidationOptions: RepositoryValidationOptions;
+public readonly nvmNodeVersion: string;
 ```
 
-- *Type:* <a href="#@gemeentenijmegen/projen-project-type.RepositoryValidationOptions">RepositoryValidationOptions</a>
+- *Type:* string
 
-Properties for configuring the repsitory validation workflow.
+Set the node version for .nvmrc and codebuild pipelines.
 
 ---
 
@@ -14847,7 +14891,7 @@ const gemeenteNijmegenOptions: GemeenteNijmegenOptions = { ... }
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenOptions.property.enableAutoMergeDependencies">enableAutoMergeDependencies</a></code> | <code>boolean</code> | Enable an additional workflow that auto-merges PR's with the 'auto-merge' label. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenOptions.property.enableEmergencyProcedure">enableEmergencyProcedure</a></code> | <code>boolean</code> | Enable an additional workflow that allows branch protection bypass and will inform the team trough slack. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenOptions.property.enableRepositoryValidation">enableRepositoryValidation</a></code> | <code>boolean</code> | Enable an additional workflow that checks if the Github repository is configured according to the desired configuration for Gemeente Nijmegen. |
-| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenOptions.property.repositoryValidationOptions">repositoryValidationOptions</a></code> | <code><a href="#@gemeentenijmegen/projen-project-type.RepositoryValidationOptions">RepositoryValidationOptions</a></code> | Properties for configuring the repsitory validation workflow. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenOptions.property.nvmNodeVersion">nvmNodeVersion</a></code> | <code>string</code> | Set the node version for .nvmrc and codebuild pipelines. |
 
 ---
 
@@ -14894,15 +14938,15 @@ This includes emergency workflow, correct secrets, branch protection etc.
 
 ---
 
-##### `repositoryValidationOptions`<sup>Optional</sup> <a name="repositoryValidationOptions" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenOptions.property.repositoryValidationOptions"></a>
+##### `nvmNodeVersion`<sup>Optional</sup> <a name="nvmNodeVersion" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenOptions.property.nvmNodeVersion"></a>
 
 ```typescript
-public readonly repositoryValidationOptions: RepositoryValidationOptions;
+public readonly nvmNodeVersion: string;
 ```
 
-- *Type:* <a href="#@gemeentenijmegen/projen-project-type.RepositoryValidationOptions">RepositoryValidationOptions</a>
+- *Type:* string
 
-Properties for configuring the repsitory validation workflow.
+Set the node version for .nvmrc and codebuild pipelines.
 
 ---
 
@@ -15078,7 +15122,7 @@ const gemeenteNijmegenTsPackageOptions: GemeenteNijmegenTsPackageOptions = { ...
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.enableAutoMergeDependencies">enableAutoMergeDependencies</a></code> | <code>boolean</code> | Enable an additional workflow that auto-merges PR's with the 'auto-merge' label. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.enableEmergencyProcedure">enableEmergencyProcedure</a></code> | <code>boolean</code> | Enable an additional workflow that allows branch protection bypass and will inform the team trough slack. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.enableRepositoryValidation">enableRepositoryValidation</a></code> | <code>boolean</code> | Enable an additional workflow that checks if the Github repository is configured according to the desired configuration for Gemeente Nijmegen. |
-| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.repositoryValidationOptions">repositoryValidationOptions</a></code> | <code><a href="#@gemeentenijmegen/projen-project-type.RepositoryValidationOptions">RepositoryValidationOptions</a></code> | Properties for configuring the repsitory validation workflow. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.nvmNodeVersion">nvmNodeVersion</a></code> | <code>string</code> | Set the node version for .nvmrc and codebuild pipelines. |
 
 ---
 
@@ -17361,86 +17405,15 @@ This includes emergency workflow, correct secrets, branch protection etc.
 
 ---
 
-##### `repositoryValidationOptions`<sup>Optional</sup> <a name="repositoryValidationOptions" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.repositoryValidationOptions"></a>
+##### `nvmNodeVersion`<sup>Optional</sup> <a name="nvmNodeVersion" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.nvmNodeVersion"></a>
 
 ```typescript
-public readonly repositoryValidationOptions: RepositoryValidationOptions;
-```
-
-- *Type:* <a href="#@gemeentenijmegen/projen-project-type.RepositoryValidationOptions">RepositoryValidationOptions</a>
-
-Properties for configuring the repsitory validation workflow.
-
----
-
-### RepositoryValidationOptions <a name="RepositoryValidationOptions" id="@gemeentenijmegen/projen-project-type.RepositoryValidationOptions"></a>
-
-Repository validation workflow configuration options.
-
-#### Initializer <a name="Initializer" id="@gemeentenijmegen/projen-project-type.RepositoryValidationOptions.Initializer"></a>
-
-```typescript
-import { RepositoryValidationOptions } from '@gemeentenijmegen/projen-project-type'
-
-const repositoryValidationOptions: RepositoryValidationOptions = { ... }
-```
-
-#### Properties <a name="Properties" id="Properties"></a>
-
-| **Name** | **Type** | **Description** |
-| --- | --- | --- |
-| <code><a href="#@gemeentenijmegen/projen-project-type.RepositoryValidationOptions.property.checkAcceptanceBranch">checkAcceptanceBranch</a></code> | <code>boolean</code> | Check if acceptance branch requires the correct checks. |
-| <code><a href="#@gemeentenijmegen/projen-project-type.RepositoryValidationOptions.property.emergencyWorkflow">emergencyWorkflow</a></code> | <code>boolean</code> | Check if the emergency worflow is deployed and if the webhook url secret is set. |
-| <code><a href="#@gemeentenijmegen/projen-project-type.RepositoryValidationOptions.property.publishToNpm">publishToNpm</a></code> | <code>boolean</code> | Check if the NPM_TOKEN secret is configured. |
-| <code><a href="#@gemeentenijmegen/projen-project-type.RepositoryValidationOptions.property.upgradeBranch">upgradeBranch</a></code> | <code>string</code> | Checks if the upgrade workflow is set for this branch. |
-
----
-
-##### `checkAcceptanceBranch`<sup>Optional</sup> <a name="checkAcceptanceBranch" id="@gemeentenijmegen/projen-project-type.RepositoryValidationOptions.property.checkAcceptanceBranch"></a>
-
-```typescript
-public readonly checkAcceptanceBranch: boolean;
-```
-
-- *Type:* boolean
-
-Check if acceptance branch requires the correct checks.
-
----
-
-##### `emergencyWorkflow`<sup>Optional</sup> <a name="emergencyWorkflow" id="@gemeentenijmegen/projen-project-type.RepositoryValidationOptions.property.emergencyWorkflow"></a>
-
-```typescript
-public readonly emergencyWorkflow: boolean;
-```
-
-- *Type:* boolean
-
-Check if the emergency worflow is deployed and if the webhook url secret is set.
-
----
-
-##### `publishToNpm`<sup>Optional</sup> <a name="publishToNpm" id="@gemeentenijmegen/projen-project-type.RepositoryValidationOptions.property.publishToNpm"></a>
-
-```typescript
-public readonly publishToNpm: boolean;
-```
-
-- *Type:* boolean
-
-Check if the NPM_TOKEN secret is configured.
-
----
-
-##### `upgradeBranch`<sup>Optional</sup> <a name="upgradeBranch" id="@gemeentenijmegen/projen-project-type.RepositoryValidationOptions.property.upgradeBranch"></a>
-
-```typescript
-public readonly upgradeBranch: string;
+public readonly nvmNodeVersion: string;
 ```
 
 - *Type:* string
 
-Checks if the upgrade workflow is set for this branch.
+Set the node version for .nvmrc and codebuild pipelines.
 
 ---
 
