@@ -70,7 +70,7 @@ export function setDefaultValues<T extends CombinedProjectOptions>(options: T): 
     // defaultReleaseBranch: 'production', // Cannot set this one here as it is required in awscdk project type
     majorVersion: 0,
     depsUpgradeOptions: {
-      cooldown: 7,
+      // cooldown: 7,
       workflowOptions: {
         labels: upgradeLabels,
         branches: [acceptanceBranchName],
