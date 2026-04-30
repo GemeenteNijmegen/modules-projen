@@ -21,7 +21,7 @@ const project = new cdk.JsiiProject({
     'ts-node',
   ],
   peerDeps: [
-    'projen@>=0.99.0',
+    'projen@>=0.99.27',
     'constructs',
   ], // Make sure the consuming library will provide a projen version.
   packageName: packageName,

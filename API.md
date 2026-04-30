@@ -6338,6 +6338,7 @@ const gemeenteNijmegenCdkAppOptions: GemeenteNijmegenCdkAppOptions = { ... }
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.logging">logging</a></code> | <code>projen.LoggerOptions</code> | Configure logging options such as verbosity. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.outdir">outdir</a></code> | <code>string</code> | The root directory of the project. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.parent">parent</a></code> | <code>projen.Project</code> | The parent project, if this project is part of a bigger project. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.projectTree">projectTree</a></code> | <code>boolean</code> | Generate a project tree file (`.projen/tree.json`) that shows all components and their relationships. Useful for understanding your project structure and debugging. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.projenCommand">projenCommand</a></code> | <code>string</code> | The shell command to use in order to run the projen CLI. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.projenrcJson">projenrcJson</a></code> | <code>boolean</code> | Generate (once) .projenrc.json (in JSON). Set to `false` in order to disable .projenrc.json generation. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.projenrcJsonOptions">projenrcJsonOptions</a></code> | <code>projen.ProjenrcJsonOptions</code> | Options for .projenrc.json. |
@@ -6510,6 +6511,7 @@ const gemeenteNijmegenCdkAppOptions: GemeenteNijmegenCdkAppOptions = { ... }
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.lambdaAutoDiscover">lambdaAutoDiscover</a></code> | <code>boolean</code> | Automatically adds an `awscdk.LambdaFunction` for each `.lambda.ts` handler in your source tree. If this is disabled, you can manually add an `awscdk.AutoDiscover` component to your project. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.lambdaExtensionAutoDiscover">lambdaExtensionAutoDiscover</a></code> | <code>boolean</code> | Automatically adds an `awscdk.LambdaExtension` for each `.lambda-extension.ts` entrypoint in your source tree. If this is disabled, you can manually add an `awscdk.AutoDiscover` component to your project. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.lambdaOptions">lambdaOptions</a></code> | <code>projen.awscdk.LambdaFunctionCommonOptions</code> | Common options for all AWS Lambda functions. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.singletonLambdaAutoDiscover">singletonLambdaAutoDiscover</a></code> | <code>boolean</code> | Automatically adds an `awscdk.SingletonFunction` for each `.singleton-lambda.ts` handler in your source tree. If this is disabled, you can manually add an `awscdk.AutoDiscover` component to your project. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.enableAutoMergeDependencies">enableAutoMergeDependencies</a></code> | <code>boolean</code> | Enable an additional workflow that auto-merges PR's with the 'auto-merge' label. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.enableEmergencyProcedure">enableEmergencyProcedure</a></code> | <code>boolean</code> | Enable an additional workflow that allows branch protection bypass and will inform the team trough slack. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.enableRepositoryValidation">enableRepositoryValidation</a></code> | <code>boolean</code> | Enable an additional workflow that checks if the Github repository is configured according to the desired configuration for Gemeente Nijmegen. |
@@ -6609,6 +6611,19 @@ public readonly parent: Project;
 - *Type:* projen.Project
 
 The parent project, if this project is part of a bigger project.
+
+---
+
+##### `projectTree`<sup>Optional</sup> <a name="projectTree" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.projectTree"></a>
+
+```typescript
+public readonly projectTree: boolean;
+```
+
+- *Type:* boolean
+- *Default:* false
+
+Generate a project tree file (`.projen/tree.json`) that shows all components and their relationships. Useful for understanding your project structure and debugging.
 
 ---
 
@@ -8860,7 +8875,7 @@ public readonly cdkVersion: string;
 ```
 
 - *Type:* string
-- *Default:* "2.1.0"
+- *Default:* "2.189.1"
 
 Minimum version of the AWS CDK to depend on.
 
@@ -8989,7 +9004,7 @@ public readonly constructsVersion: string;
 ```
 
 - *Type:* string
-- *Default:* for CDK 1.x the default is "3.2.27", for CDK 2.x the default is "10.0.5".
+- *Default:* for CDK 1.x the default is "3.2.27", for CDK 2.x the default is "10.5.1".
 
 Minimum version of the `constructs` library to depend on.
 
@@ -9098,6 +9113,19 @@ Common options for all AWS Lambda functions.
 
 ---
 
+##### `singletonLambdaAutoDiscover`<sup>Optional</sup> <a name="singletonLambdaAutoDiscover" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.singletonLambdaAutoDiscover"></a>
+
+```typescript
+public readonly singletonLambdaAutoDiscover: boolean;
+```
+
+- *Type:* boolean
+- *Default:* true
+
+Automatically adds an `awscdk.SingletonFunction` for each `.singleton-lambda.ts` handler in your source tree. If this is disabled, you can manually add an `awscdk.AutoDiscover` component to your project.
+
+---
+
 ##### `enableAutoMergeDependencies`<sup>Optional</sup> <a name="enableAutoMergeDependencies" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkAppOptions.property.enableAutoMergeDependencies"></a>
 
 ```typescript
@@ -9187,6 +9215,7 @@ const gemeenteNijmegenCdkLibOptions: GemeenteNijmegenCdkLibOptions = { ... }
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.logging">logging</a></code> | <code>projen.LoggerOptions</code> | Configure logging options such as verbosity. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.outdir">outdir</a></code> | <code>string</code> | The root directory of the project. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.parent">parent</a></code> | <code>projen.Project</code> | The parent project, if this project is part of a bigger project. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.projectTree">projectTree</a></code> | <code>boolean</code> | Generate a project tree file (`.projen/tree.json`) that shows all components and their relationships. Useful for understanding your project structure and debugging. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.projenCommand">projenCommand</a></code> | <code>string</code> | The shell command to use in order to run the projen CLI. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.projenrcJson">projenrcJson</a></code> | <code>boolean</code> | Generate (once) .projenrc.json (in JSON). Set to `false` in order to disable .projenrc.json generation. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.projenrcJsonOptions">projenrcJsonOptions</a></code> | <code>projen.ProjenrcJsonOptions</code> | Options for .projenrc.json. |
@@ -9367,6 +9396,7 @@ const gemeenteNijmegenCdkLibOptions: GemeenteNijmegenCdkLibOptions = { ... }
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.lambdaAutoDiscover">lambdaAutoDiscover</a></code> | <code>boolean</code> | Automatically adds an `aws_lambda.Function` for each `.lambda.ts` handler in your source tree. If this is disabled, you either need to explicitly call `aws_lambda.Function.autoDiscover()` or define a `new aws_lambda.Function()` for each handler. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.lambdaExtensionAutoDiscover">lambdaExtensionAutoDiscover</a></code> | <code>boolean</code> | Automatically adds an `awscdk.LambdaExtension` for each `.lambda-extension.ts` entrypoint in your source tree. If this is disabled, you can manually add an `awscdk.AutoDiscover` component to your project. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.lambdaOptions">lambdaOptions</a></code> | <code>projen.awscdk.LambdaFunctionCommonOptions</code> | Common options for all AWS Lambda functions. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.singletonLambdaAutoDiscover">singletonLambdaAutoDiscover</a></code> | <code>boolean</code> | Automatically adds an `awscdk.SingletonFunction` for each `.singleton-lambda.ts` handler in your source tree. If this is disabled, you can manually add an `awscdk.AutoDiscover` component to your project. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.enableAutoMergeDependencies">enableAutoMergeDependencies</a></code> | <code>boolean</code> | Enable an additional workflow that auto-merges PR's with the 'auto-merge' label. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.enableEmergencyProcedure">enableEmergencyProcedure</a></code> | <code>boolean</code> | Enable an additional workflow that allows branch protection bypass and will inform the team trough slack. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.enableRepositoryValidation">enableRepositoryValidation</a></code> | <code>boolean</code> | Enable an additional workflow that checks if the Github repository is configured according to the desired configuration for Gemeente Nijmegen. |
@@ -9465,6 +9495,19 @@ public readonly parent: Project;
 - *Type:* projen.Project
 
 The parent project, if this project is part of a bigger project.
+
+---
+
+##### `projectTree`<sup>Optional</sup> <a name="projectTree" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.projectTree"></a>
+
+```typescript
+public readonly projectTree: boolean;
+```
+
+- *Type:* boolean
+- *Default:* false
+
+Generate a project tree file (`.projen/tree.json`) that shows all components and their relationships. Useful for understanding your project structure and debugging.
 
 ---
 
@@ -11741,7 +11784,7 @@ public readonly jsiiVersion: string;
 ```
 
 - *Type:* string
-- *Default:* "~5.8.0"
+- *Default:* "~5.9.0"
 
 Version of the jsii compiler to use.
 
@@ -11860,7 +11903,7 @@ public readonly cdkVersion: string;
 ```
 
 - *Type:* string
-- *Default:* "2.1.0"
+- *Default:* "2.189.1"
 
 Minimum version of the AWS CDK to depend on.
 
@@ -11989,7 +12032,7 @@ public readonly constructsVersion: string;
 ```
 
 - *Type:* string
-- *Default:* for CDK 1.x the default is "3.2.27", for CDK 2.x the default is "10.0.5".
+- *Default:* for CDK 1.x the default is "3.2.27", for CDK 2.x the default is "10.5.1".
 
 Minimum version of the `constructs` library to depend on.
 
@@ -12073,6 +12116,19 @@ Common options for all AWS Lambda functions.
 
 ---
 
+##### `singletonLambdaAutoDiscover`<sup>Optional</sup> <a name="singletonLambdaAutoDiscover" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.singletonLambdaAutoDiscover"></a>
+
+```typescript
+public readonly singletonLambdaAutoDiscover: boolean;
+```
+
+- *Type:* boolean
+- *Default:* true
+
+Automatically adds an `awscdk.SingletonFunction` for each `.singleton-lambda.ts` handler in your source tree. If this is disabled, you can manually add an `awscdk.AutoDiscover` component to your project.
+
+---
+
 ##### `enableAutoMergeDependencies`<sup>Optional</sup> <a name="enableAutoMergeDependencies" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLibOptions.property.enableAutoMergeDependencies"></a>
 
 ```typescript
@@ -12149,6 +12205,7 @@ const gemeenteNijmegenJsiiOptions: GemeenteNijmegenJsiiOptions = { ... }
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.logging">logging</a></code> | <code>projen.LoggerOptions</code> | Configure logging options such as verbosity. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.outdir">outdir</a></code> | <code>string</code> | The root directory of the project. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.parent">parent</a></code> | <code>projen.Project</code> | The parent project, if this project is part of a bigger project. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.projectTree">projectTree</a></code> | <code>boolean</code> | Generate a project tree file (`.projen/tree.json`) that shows all components and their relationships. Useful for understanding your project structure and debugging. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.projenCommand">projenCommand</a></code> | <code>string</code> | The shell command to use in order to run the projen CLI. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.projenrcJson">projenrcJson</a></code> | <code>boolean</code> | Generate (once) .projenrc.json (in JSON). Set to `false` in order to disable .projenrc.json generation. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.projenrcJsonOptions">projenrcJsonOptions</a></code> | <code>projen.ProjenrcJsonOptions</code> | Options for .projenrc.json. |
@@ -12411,6 +12468,19 @@ public readonly parent: Project;
 - *Type:* projen.Project
 
 The parent project, if this project is part of a bigger project.
+
+---
+
+##### `projectTree`<sup>Optional</sup> <a name="projectTree" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsiiOptions.property.projectTree"></a>
+
+```typescript
+public readonly projectTree: boolean;
+```
+
+- *Type:* boolean
+- *Default:* false
+
+Generate a project tree file (`.projen/tree.json`) that shows all components and their relationships. Useful for understanding your project structure and debugging.
 
 ---
 
@@ -14687,7 +14757,7 @@ public readonly jsiiVersion: string;
 ```
 
 - *Type:* string
-- *Default:* "~5.8.0"
+- *Default:* "~5.9.0"
 
 Version of the jsii compiler to use.
 
@@ -14927,6 +14997,7 @@ const gemeenteNijmegenTsPackageOptions: GemeenteNijmegenTsPackageOptions = { ...
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.logging">logging</a></code> | <code>projen.LoggerOptions</code> | Configure logging options such as verbosity. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.outdir">outdir</a></code> | <code>string</code> | The root directory of the project. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.parent">parent</a></code> | <code>projen.Project</code> | The parent project, if this project is part of a bigger project. |
+| <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.projectTree">projectTree</a></code> | <code>boolean</code> | Generate a project tree file (`.projen/tree.json`) that shows all components and their relationships. Useful for understanding your project structure and debugging. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.projenCommand">projenCommand</a></code> | <code>string</code> | The shell command to use in order to run the projen CLI. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.projenrcJson">projenrcJson</a></code> | <code>boolean</code> | Generate (once) .projenrc.json (in JSON). Set to `false` in order to disable .projenrc.json generation. |
 | <code><a href="#@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.projenrcJsonOptions">projenrcJsonOptions</a></code> | <code>projen.ProjenrcJsonOptions</code> | Options for .projenrc.json. |
@@ -15173,6 +15244,19 @@ public readonly parent: Project;
 - *Type:* projen.Project
 
 The parent project, if this project is part of a bigger project.
+
+---
+
+##### `projectTree`<sup>Optional</sup> <a name="projectTree" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackageOptions.property.projectTree"></a>
+
+```typescript
+public readonly projectTree: boolean;
+```
+
+- *Type:* boolean
+- *Default:* false
+
+Generate a project tree file (`.projen/tree.json`) that shows all components and their relationships. Useful for understanding your project structure and debugging.
 
 ---
 
