@@ -44,7 +44,6 @@ export class GemeenteNijmegenCdkApp extends AwsCdkTypeScriptApp {
      */
     options = {
       ...options,
-      projenVersion: '0.98.29', // Voor de zekerheid hier ook de pinned version, waarschijnlijk niet nodig, maar toch
       scripts: {
         lint: 'cfn-lint cdk.out/**/*.template.json -i W3005 W2001',
         ...options.scripts,
