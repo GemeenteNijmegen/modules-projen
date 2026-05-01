@@ -1,6 +1,6 @@
 import { TextFile } from 'projen';
 import { GithubCredentials } from 'projen/lib/github';
-import { NodeProject, NodeProjectOptions, NpmAccess } from 'projen/lib/javascript';
+import { NodePackageManager, NodeProject, NodeProjectOptions, NpmAccess } from 'projen/lib/javascript';
 import combine from './combine';
 import { Defaults } from './defaults';
 import { EmergencyProcedure } from './emergeny';
@@ -54,6 +54,7 @@ export function setDefaultValues<T extends CombinedProjectOptions>(options: T): 
   options = {
     license: Defaults.DEFAULT_LICENSE,
     nvmNodeVersion: Defaults.DEFAULT_NODE_VERSION,
+    packageManager: NodePackageManager.NPM,
     ...options,
   };
 
@@ -69,6 +70,7 @@ export function setDefaultValues<T extends CombinedProjectOptions>(options: T): 
     // defaultReleaseBranch: 'production', // Cannot set this one here as it is required in awscdk project type
     majorVersion: 0,
     depsUpgradeOptions: {
+      // cooldown: 7,
       workflowOptions: {
         labels: upgradeLabels,
         branches: [acceptanceBranchName],
