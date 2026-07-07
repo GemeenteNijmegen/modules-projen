@@ -1,4 +1,4 @@
-import { TextFile } from 'projen';
+import { Project, TextFile } from 'projen';
 import { GithubCredentials } from 'projen/lib/github';
 import { NodePackageManager, NodeProject, NodeProjectOptions, NpmAccess } from 'projen/lib/javascript';
 import combine from './combine';
@@ -194,4 +194,21 @@ export function setupDefaultCdkOptions<T extends CombinedProjectOptions>(options
   };
 
   return options;
+}
+
+
+/**
+ * Adds a task which performs specific cloudformation linting
+ * @param project
+ * @returns
+ */
+export function addCfnLintTask(project: Project) {
+  const CFN_LINT_TASK = 'cfn-lint';
+  const CFN_LINT_COMMAND = 'cfn-lint cdk.out/**/*.template.json -i W3005 W2001';
+
+  const task = project.tasks.tryFind(CFN_LINT_TASK) ?? project.addTask(CFN_LINT_TASK, {
+    description: 'Lint synthesized CloudFormation templates',
+  });
+
+  task.reset(CFN_LINT_COMMAND);
 }

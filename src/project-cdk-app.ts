@@ -1,7 +1,7 @@
 import { AwsCdkTypeScriptApp, AwsCdkTypeScriptAppOptions } from 'projen/lib/awscdk';
 import combine from './combine';
 import { GemeenteNijmegenSampleFiles } from './sample/sample';
-import { GemeenteNijmegenOptions, setDefaultValues, setupDefaultCdkOptions, setupSharedConfiguration } from './shared';
+import { addCfnLintTask, GemeenteNijmegenOptions, setDefaultValues, setupDefaultCdkOptions, setupSharedConfiguration } from './shared';
 
 export interface GemeenteNijmegenCdkAppOptions extends AwsCdkTypeScriptAppOptions, GemeenteNijmegenOptions {
   /**
@@ -71,7 +71,7 @@ export class GemeenteNijmegenCdkApp extends AwsCdkTypeScriptApp {
       };
       const cfnLint = {
         name: 'CloudFormation lint',
-        run: 'npx projen lint',
+        run: 'npx projen cfn-lint',
       };
       options = {
         ...options,
@@ -84,6 +84,9 @@ export class GemeenteNijmegenCdkApp extends AwsCdkTypeScriptApp {
      * Construct the actual projen project
      */
     super(options);
+
+    // Add clouformation linter task
+    addCfnLintTask(this);
 
     // Conditionally create sample files only if makeSampleFiles is true.
     if (makeSampleFiles) {
