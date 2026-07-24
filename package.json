@@ -41,16 +41,16 @@
     "@typescript-eslint/eslint-plugin": "^8",
     "@typescript-eslint/parser": "^8",
     "commit-and-tag-version": "^12",
-    "constructs": "^10.6.0",
+    "constructs": "^10.7.1",
     "eslint": "^9",
     "eslint-import-resolver-typescript": "^2.7.1",
     "eslint-plugin-import": "^2.32.0",
     "jest": "^27",
     "jest-junit": "^16",
     "jsii": "~5.9.0",
-    "jsii-diff": "^1.136.0",
+    "jsii-diff": "^1.139.0",
     "jsii-docgen": "^10.5.0",
-    "jsii-pacmak": "^1.136.0",
+    "jsii-pacmak": "^1.139.0",
     "jsii-rosetta": "~5.9.0",
     "projen": "0.99.27",
     "ts-jest": "^27",
@@ -58,7 +58,7 @@
     "typescript": "^4.9.5"
   },
   "peerDependencies": {
-    "constructs": "^10.6.0",
+    "constructs": "^10.7.1",
     "projen": ">=0.99.27"
   },
   "main": "lib/index.js",
