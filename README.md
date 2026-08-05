@@ -25,6 +25,7 @@ The following project types can be used:
 - `cdk-lib` standard CDK construct library (published to NPM by default)
 - `jsii-lib` a JSII application (published to NPM by default)
 - `ts-lib` a typescript project (published to NPM by default)
+- `ts-app` a typescript project without publishing or cdk
 
 Adding sample files to a cdk-app can be done with
 ``` bash

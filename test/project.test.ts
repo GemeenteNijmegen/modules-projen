@@ -1,6 +1,6 @@
 import { LambdaRuntime } from 'projen/lib/awscdk';
 import { synthSnapshot } from 'projen/lib/util/synth';
-import { GemeenteNijmegenCdkApp, GemeenteNijmegenCdkLib, GemeenteNijmegenJsii, GemeenteNijmegenTsPackage } from '../src';
+import { GemeenteNijmegenCdkApp, GemeenteNijmegenCdkLib, GemeenteNijmegenJsii, GemeenteNijmegenTsApp, GemeenteNijmegenTsPackage } from '../src';
 
 const repository = 'https://github.com/GemeenteNijmegen/test';
 
@@ -103,6 +103,15 @@ describe('NijmegenProject NPM', () => {
     });
     const snapshot = synthSnapshot(project);
     expect(snapshot['.github/workflows/release.yml']).toContain('Publish to npm');
+  });
+
+  test('ts-app project does not publish to NPM', () => {
+    const project = new GemeenteNijmegenTsApp({
+      defaultReleaseBranch: 'main',
+      name: 'test project',
+    });
+    const snapshot = synthSnapshot(project);
+    expect(snapshot['.github/workflows/release.yml']).not.toContain('Publish to npm');
   });
 
 });
@@ -275,4 +284,39 @@ describe('NijmegenProject repo conf validation workflow', () => {
     expect(logs).not.toContain('❗️ Emergency workflow is not enabled, is this intentional?');
   });
 
+  describe('NijmegenProject TypeScript app', () => {
+
+    const project = new GemeenteNijmegenTsApp({
+      defaultReleaseBranch: 'main',
+      name: 'test project',
+    });
+    const snapshot = synthSnapshot(project);
+
+    test('Contains standard TypeScript build tasks', () => {
+      const tasks = snapshot['.projen/tasks.json'].tasks;
+
+      expect(tasks.build).toBeDefined();
+      expect(tasks.compile).toBeDefined();
+      expect(tasks.eslint).toBeDefined();
+      expect(tasks.test).toBeDefined();
+    });
+
+    test('Contains shared Nijmegen configuration', () => {
+      expect(snapshot['.nvmrc']).toContain('22'); // not needed for ts-app without pipeline, but does not hurt
+      expect(snapshot['.github/workflows/auto-merge.yml']).toBeDefined();
+      expect(snapshot['.github/workflows/emergency.yml']).toBeDefined();
+    });
+
+    test('Does not contain CDK or JSII configuration', () => {
+      const packageJson = snapshot['package.json'];
+
+      expect(snapshot).not.toHaveProperty('cdk.json');
+      expect(packageJson).not.toHaveProperty('jsii');
+      expect(packageJson.dependencies ?? {}).not.toHaveProperty('aws-cdk-lib');
+      expect(packageJson.dependencies ?? {}).not.toHaveProperty('@gemeentenijmegen/aws-constructs');
+      expect(packageJson.devDependencies ?? {}).not.toHaveProperty('aws-cdk-lib');
+      expect(packageJson.devDependencies ?? {}).not.toHaveProperty('@gemeentenijmegen/aws-constructs');
+    });
+
+  });
 });
