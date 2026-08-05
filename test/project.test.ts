@@ -1,6 +1,6 @@
 import { LambdaRuntime } from 'projen/lib/awscdk';
 import { synthSnapshot } from 'projen/lib/util/synth';
-import { GemeenteNijmegenCdkApp, GemeenteNijmegenCdkLib, GemeenteNijmegenJsii, GemeenteNijmegenTsPackage } from '../src';
+import { GemeenteNijmegenCdkApp, GemeenteNijmegenCdkLib, GemeenteNijmegenJsii, GemeenteNijmegenTsApp, GemeenteNijmegenTsPackage } from '../src';
 
 const repository = 'https://github.com/GemeenteNijmegen/test';
 
@@ -103,6 +103,15 @@ describe('NijmegenProject NPM', () => {
     });
     const snapshot = synthSnapshot(project);
     expect(snapshot['.github/workflows/release.yml']).toContain('Publish to npm');
+  });
+
+  test('ts-app project does not publish to NPM', () => {
+    const project = new GemeenteNijmegenTsApp({
+      defaultReleaseBranch: 'main',
+      name: 'test project',
+    });
+    const snapshot = synthSnapshot(project);
+    expect(snapshot['.github/workflows/release.yml']).not.toContain('Publish to npm');
   });
 
 });
