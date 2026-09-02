@@ -10,6 +10,5 @@ export const showNodeAndNpmVersions = {
     'echo "which npm=$(which npm)"',
     'echo "platform=$(node -p \\"process.platform\\")"',
     'echo "arch=$(node -p \\"process.arch\\")"',
-    'echo "CI=${CI:-}"',
   ].join('\n'),
 };

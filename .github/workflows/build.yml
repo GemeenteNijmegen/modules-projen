@@ -33,7 +33,6 @@ jobs:
           echo "which npm=$(which npm)"
           echo "platform=$(node -p \"process.platform\")"
           echo "arch=$(node -p \"process.arch\")"
-          echo "CI=${CI:-}"
       - name: build
         run: npx projen build
       - name: Find mutations
