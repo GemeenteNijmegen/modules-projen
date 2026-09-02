@@ -8,6 +8,8 @@ export const showNodeAndNpmVersions = {
     'echo "npm=$(npm -v)"',
     'echo "which node=$(which node)"',
     'echo "which npm=$(which npm)"',
-    'npm config get user-agent',
+    'echo "platform=$(node -p \\"process.platform\\")"',
+    'echo "arch=$(node -p \\"process.arch\\")"',
+    'echo "CI=${CI:-}"',
   ].join('\n'),
 };
