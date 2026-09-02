@@ -6,8 +6,6 @@ export const showNodeAndNpmVersions = {
   run: [
     'echo "node=$(node -v)"',
     'echo "npm=$(npm -v)"',
-    'echo "which node=$(which node)"',
-    'echo "which npm=$(which npm)"',
     'echo "platform=$(node -p \\"process.platform\\")"',
     'echo "arch=$(node -p \\"process.arch\\")"',
   ].join('\n'),
