@@ -302,7 +302,7 @@ describe('NijmegenProject repo conf validation workflow', () => {
     });
 
     test('Contains shared Nijmegen configuration', () => {
-      expect(snapshot['.nvmrc']).toContain('22'); // not needed for ts-app without pipeline, but does not hurt
+      expect(snapshot['.nvmrc']).toContain('24'); // not needed for ts-app without pipeline, but does not hurt
       expect(snapshot['.github/workflows/auto-merge.yml']).toBeDefined();
       expect(snapshot['.github/workflows/emergency.yml']).toBeDefined();
     });

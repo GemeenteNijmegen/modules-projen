@@ -6,6 +6,7 @@ import { Defaults } from './defaults';
 import { EmergencyProcedure } from './emergeny';
 import { addMergeJob } from './mergejob';
 import { addRepositoryValidationJob } from './validation';
+import { showNodeAndNpmVersions } from './workflowSteps';
 
 const acceptanceBranchName = 'acceptance';
 
@@ -38,6 +39,11 @@ export interface GemeenteNijmegenOptions {
    */
   readonly nvmNodeVersion?: string;
 
+  /**
+   * Set the node version for gh actions
+   */
+  readonly workflowNodeVersion?: string;
+
 
 }
 
@@ -54,6 +60,8 @@ export function setDefaultValues<T extends CombinedProjectOptions>(options: T): 
   options = {
     license: Defaults.DEFAULT_LICENSE,
     nvmNodeVersion: Defaults.DEFAULT_NODE_VERSION,
+    // GH actions node version the same as aws pipeline
+    workflowNodeVersion: Defaults.DEFAULT_NODE_VERSION,
     packageManager: NodePackageManager.NPM,
     ...options,
   };
@@ -109,9 +117,26 @@ export function setDefaultValues<T extends CombinedProjectOptions>(options: T): 
     ),
   };
 
+  /**
+   * Log Node and npm versions in GitHub Actions build logs
+   */
+  options = addBuildWorkflowVersionLogging(options);
+
   return options;
 }
 
+export function addBuildWorkflowVersionLogging<T extends CombinedProjectOptions>(options: T): T {
+  return {
+    ...options,
+    buildWorkflowOptions: {
+      ...options.buildWorkflowOptions,
+      preBuildSteps: combine(
+        options.buildWorkflowOptions?.preBuildSteps,
+        showNodeAndNpmVersions,
+      ),
+    },
+  };
+}
 
 export function setDefaultValuesNpmPublish<T extends CombinedProjectOptions>(options: T): T {
   // Set defaults for publishing to npm.js
