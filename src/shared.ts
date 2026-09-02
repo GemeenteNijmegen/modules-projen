@@ -6,7 +6,6 @@ import { Defaults } from './defaults';
 import { EmergencyProcedure } from './emergeny';
 import { addMergeJob } from './mergejob';
 import { addRepositoryValidationJob } from './validation';
-import { showNodeAndNpmVersions } from './workflowSteps';
 
 const acceptanceBranchName = 'acceptance';
 
@@ -117,26 +116,9 @@ export function setDefaultValues<T extends CombinedProjectOptions>(options: T): 
     ),
   };
 
-  /**
-   * Log Node and npm versions in GitHub Actions build logs
-   */
-  options = addBuildWorkflowVersionLogging(options);
-
   return options;
 }
 
-export function addBuildWorkflowVersionLogging<T extends CombinedProjectOptions>(options: T): T {
-  return {
-    ...options,
-    buildWorkflowOptions: {
-      ...options.buildWorkflowOptions,
-      preBuildSteps: combine(
-        options.buildWorkflowOptions?.preBuildSteps,
-        showNodeAndNpmVersions,
-      ),
-    },
-  };
-}
 
 export function setDefaultValuesNpmPublish<T extends CombinedProjectOptions>(options: T): T {
   // Set defaults for publishing to npm.js

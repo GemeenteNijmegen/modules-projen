@@ -2,7 +2,6 @@ import { cdk } from 'projen';
 import { GithubCredentials } from 'projen/lib/github';
 import { NodePackageManager, NpmAccess } from 'projen/lib/javascript';
 import { Defaults } from './src/defaults';
-import { showNodeAndNpmVersions } from './src/workflowSteps';
 
 const organizationName = '@gemeentenijmegen';
 const projectName = 'projen-project-type';
@@ -23,11 +22,6 @@ const project = new cdk.JsiiProject({
   npmTrustedPublishing: true,
   packageManager: NodePackageManager.NPM,
   workflowNodeVersion: Defaults.DEFAULT_NODE_VERSION,
-  buildWorkflowOptions: {
-    preBuildSteps: [
-      showNodeAndNpmVersions,
-    ],
-  },
   devDeps: [
     'ts-node',
   ],

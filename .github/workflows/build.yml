@@ -25,12 +25,6 @@ jobs:
           node-version: "24"
       - name: Install dependencies
         run: npm install
-      - name: Show Node and npm versions
-        run: |-
-          echo "node=$(node -v)"
-          echo "npm=$(npm -v)"
-          echo "platform=$(node -p \"process.platform\")"
-          echo "arch=$(node -p \"process.arch\")"
       - name: build
         run: npx projen build
       - name: Find mutations
