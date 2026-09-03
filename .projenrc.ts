@@ -1,6 +1,7 @@
-const { cdk } = require('projen');
-const { GithubCredentials } = require('projen/lib/github');
-const { NpmAccess } = require('projen/lib/javascript');
+import { cdk } from 'projen';
+import { GithubCredentials } from 'projen/lib/github';
+import { NodePackageManager, NpmAccess } from 'projen/lib/javascript';
+import { Defaults } from './src/defaults';
 
 const organizationName = '@gemeentenijmegen';
 const projectName = 'projen-project-type';
@@ -8,15 +9,19 @@ const packageName = `${organizationName}/${projectName}`;
 
 const project = new cdk.JsiiProject({
   author: organizationName,
-  repository: 'https://github.com/GemeenteNijmegen/modules-projen.git',
+  authorAddress: 'devops@nijmegen.nl',
+  repositoryUrl: 'https://github.com/GemeenteNijmegen/modules-projen.git',
   defaultReleaseBranch: 'main',
   majorVersion: 1,
   name: projectName,
+  projenrcTs: true,
   license: 'EUPL-1.2',
   release: true,
   releaseToNpm: true,
   npmAccess: NpmAccess.PUBLIC,
   npmTrustedPublishing: true,
+  packageManager: NodePackageManager.NPM,
+  workflowNodeVersion: Defaults.DEFAULT_NODE_VERSION,
   devDeps: [
     'ts-node',
   ],

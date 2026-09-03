@@ -38,6 +38,11 @@ export interface GemeenteNijmegenOptions {
    */
   readonly nvmNodeVersion?: string;
 
+  /**
+   * Set the node version for gh actions
+   */
+  readonly workflowNodeVersion?: string;
+
 
 }
 
@@ -54,6 +59,8 @@ export function setDefaultValues<T extends CombinedProjectOptions>(options: T): 
   options = {
     license: Defaults.DEFAULT_LICENSE,
     nvmNodeVersion: Defaults.DEFAULT_NODE_VERSION,
+    // GH actions node version the same as aws pipeline
+    workflowNodeVersion: Defaults.DEFAULT_NODE_VERSION,
     packageManager: NodePackageManager.NPM,
     ...options,
   };
