@@ -37,13 +37,6 @@ export interface GemeenteNijmegenOptions {
    * Set the node version for .nvmrc and codebuild pipelines
    */
   readonly nvmNodeVersion?: string;
-
-  /**
-   * Set the node version for gh actions
-   */
-  readonly workflowNodeVersion?: string;
-
-
 }
 
 //type NpmPackageOptions = TypeScriptProjectOptions | AwsCdkConstructLibraryOptions | JsiiProjectOptions;
