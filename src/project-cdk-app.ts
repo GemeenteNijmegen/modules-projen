@@ -67,7 +67,7 @@ export class GemeenteNijmegenCdkApp extends AwsCdkTypeScriptApp {
     if (enableCfnLintOnGithub) {
       const setupCfnLint = {
         name: 'Setup cfn-lint',
-        uses: 'scottbrenner/cfn-lint-action@v2',
+        uses: 'scottbrenner/cfn-lint-action@v2.8.0',
       };
       const cfnLint = {
         name: 'CloudFormation lint',
