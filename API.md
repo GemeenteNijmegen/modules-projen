@@ -4,6 +4,8 @@
 
 ### GemeenteNijmegenCdkApp <a name="GemeenteNijmegenCdkApp" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkApp"></a>
 
+- *Implements:* constructs.IConstruct, constructs.IDependable
+
 GemeenteNijmegenCdkApp projen project type for Gemeente Nijmegen CDK apps.
 
 #### Initializers <a name="Initializers" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkApp.Initializer"></a>
@@ -1631,6 +1633,8 @@ public readonly DEFAULT_TS_JEST_TRANFORM_PATTERN: string;
 
 ### GemeenteNijmegenCdkLib <a name="GemeenteNijmegenCdkLib" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLib"></a>
 
+- *Implements:* constructs.IConstruct, constructs.IDependable
+
 A GemeenteNijmegen projen project type for AwsCdkConstructLibraries bundled and published as an NPM package.
 
 #### Initializers <a name="Initializers" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenCdkLib.Initializer"></a>
@@ -3251,6 +3255,8 @@ public readonly DEFAULT_TS_JEST_TRANFORM_PATTERN: string;
 
 ### GemeenteNijmegenJsii <a name="GemeenteNijmegenJsii" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsii"></a>
 
+- *Implements:* constructs.IConstruct, constructs.IDependable
+
 A GemeenteNijmegen projen project type for Jsii projects bundled and published as an NPM package.
 
 #### Initializers <a name="Initializers" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenJsii.Initializer"></a>
@@ -4798,6 +4804,8 @@ public readonly DEFAULT_TS_JEST_TRANFORM_PATTERN: string;
 
 ### GemeenteNijmegenTsApp <a name="GemeenteNijmegenTsApp" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsApp"></a>
 
+- *Implements:* constructs.IConstruct, constructs.IDependable
+
 A GemeenteNijmegen projen project type for TypeScript applications.
 
 #### Initializers <a name="Initializers" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsApp.Initializer"></a>
@@ -6344,6 +6352,8 @@ public readonly DEFAULT_TS_JEST_TRANFORM_PATTERN: string;
 ---
 
 ### GemeenteNijmegenTsPackage <a name="GemeenteNijmegenTsPackage" id="@gemeentenijmegen/projen-project-type.GemeenteNijmegenTsPackage"></a>
+
+- *Implements:* constructs.IConstruct, constructs.IDependable
 
 A GemeenteNijmegen projen porject type for typescript projects bundled and published as an NPM package.
 
